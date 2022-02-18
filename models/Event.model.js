@@ -8,16 +8,13 @@ const eventSchema = new Schema({
 		unique: true
 	},
 	Type of meeting: {
-		type: String,
-		required: true
+		type: String
 	},
     Language: {
-        type: String,
-        required: true
+        type: String 
     },
 	contact email: {
-		type: String,
-		required: true
+		type: String
 	},
 	// favorites: [{ type: Schema.Types.ObjectId, ref: 'Room', default: [] }]
 });
