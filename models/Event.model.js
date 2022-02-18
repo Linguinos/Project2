@@ -4,16 +4,15 @@ const { Schema, model } = require('mongoose');
 const eventSchema = new Schema({
 	name: {
 		type: String,
-		required: true,
-		unique: true
+		required: true
 	},
-	Type of meeting: {
+	typeOfMeeting: {
 		type: String
 	},
-    Language: {
+    language: {
         type: String 
     },
-	contact email: {
+	contactEmail: {
 		type: String
 	},
 	// favorites: [{ type: Schema.Types.ObjectId, ref: 'Room', default: [] }]
