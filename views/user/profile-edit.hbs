@@ -1,35 +1,35 @@
 <h2>Edit profile</h2>
 
 <form action="/user/edit" method="POST">
-  <label> Name:
-    <input type="text" name="name" />
+  <label for="username"> Username:
+    <input type="text" name="username" />
   </label>
   <br>
 
-  <label> Bio:
-    <input type="text" name="bio"/> 
+  <label for="description"> Bio:
+    <input type="text" name="description"/> 
   </label>
-   <br>
+  <br>
   
+  <label for="city"> City:
+    <input type="text" name="city"/> 
+  </label>
+  <br>
+
+  <label for="languageSpeak"> Languages I speak:
+    <input type="text" name="languageSpeak"/> 
+  </label>
+  <br>
+
+  <label for="languageLearn"> Languages I want to learn:
+    <input type="text" name="languageLearn"/> 
+  </label>
+  <br>
+
   <label> Profile picture:
     <img src="/iron-rooms/public/images/roomaribnb.jpg" name="imgUrl"/>
   </label>
-   <br>
-
- <label> City:
-    <input type="text" name="city"/> 
-  </label>
-   <br>
-
- <label> Languages I speak:
-    <input type="text" name="langspeak"/> 
-  </label>
-   <br>
-
- <label> Languages I want to learn:
-    <input type="text" name="langlearn"/> 
-  </label>
-   <br>
+  <br>
 
  <label> Fav meme:
     <input type="image" name="meme"/> 
