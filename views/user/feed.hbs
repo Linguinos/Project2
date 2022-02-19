@@ -1,10 +1,15 @@
-<h3> Hello {{username}}</h3>
+<h2>Hello {{username}}</h2>
 
-<form action="/user/profile-user" method="GET">
-  <button type="submit">Profile</button>
+<!-- Saber com fer aparèixer edit your profile si els camps d'usuari estan buits
+  {{#if something}}
+{{/if}}
+-->
+
+<form action="/user/feed" method="POST">
+  <button type="submit">Search Profiles</button>
 </form>
 
-<form action="/auth/logout" method="GET">
-  <button type="submit">Log out</button>
-</form>
+<a href="/meetings">Events</a>
+
+
 
