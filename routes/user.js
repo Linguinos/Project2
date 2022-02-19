@@ -62,6 +62,16 @@ router.get("/results", isLoggedIn, (req, res, next) => {
   .catch(err=>console.log(err))
 });
 
+router.get("/:id", isLoggedIn, (req, res, next) => {
+  const id = req.params.id
+  console.log(id)
+  User.findById(id)
+  .then(profile => {
+    res.render("user/profile-public", profile)
+  })
+  .catch(err=>console.log(err))
+});
+
 
 
 
