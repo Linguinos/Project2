@@ -15,6 +15,10 @@ const userSchema = new Schema({
 		type: String,
 		required: true
 	},
+	imgUrl: {
+		type: String,
+		default: "https://cdn-icons-png.flaticon.com/512/456/456212.png"
+	}
 	// favorites: [{ type: Schema.Types.ObjectId, ref: 'Room', default: [] }]
 });
 

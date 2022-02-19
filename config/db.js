@@ -11,9 +11,7 @@ console.log("MONGO_URL: ", MONGO_URL)
 mongoose
   .connect(MONGO_URL, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-    // useFindAndModify: false,
-    // useCreateIndex: true
+    useUnifiedTopology: true
   })
   .then((x) => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`);
