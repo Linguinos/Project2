@@ -6,6 +6,7 @@ const Api = require("../apis/api")
 
 const isNotLoggedIn = require('../middleware/isNotLoggedIn');
 const isLoggedIn = require('../middleware/isLoggedIn');
+const { get } = require('.');
 
 /* GET users listing. 
 router.get('/', function(req, res, next) {
@@ -52,6 +53,17 @@ router.route("/edit")
             })
             .catch(error=>{res.render("user/profile-edit")})
 });
+
+router.get("/results", isLoggedIn, (req, res, next) => {
+  User.find()
+  .then(profiles => {
+    res.render("user/profile-results", {profiles})
+  })
+  .catch(err=>console.log(err))
+});
+
+
+
 
 module.exports = router;
 

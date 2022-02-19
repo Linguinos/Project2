@@ -2,6 +2,10 @@
 
 
 {{#each profiles}}
-    <p>{{name}}</p>
+<ul>
+    <li><p>{{username}}</p></li>
+    <li><p>{{city}}</p></li>
+    <li><p>{{description}}</p></li>
+</ul>
     <a href="/user/{{_id}}">See more details</a>
 {{/each}}
