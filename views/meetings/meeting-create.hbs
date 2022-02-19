@@ -1,16 +1,19 @@
 <h2>Create Event:</h2>
 
-    <h3>Name:</h3>
-    <p>{{name}}</p>
-    
-    <h3>Languages to practice:</h3>
-    <p>{{}}</p>
+<form action="/meetings/create" method="POST">
 
-    <h3>City:</h3>
-    <p>{{}}</p>
+    <label for="name">Event name:
+        <input type="text" name="name">
+    </label>
 
-    <h2>Schedule:</h2>
-    <p>{{}}</p>
+    <label for="typeOfMeeting">Type of meeting:
+        <input type="text" name="typeOfMeeting">
+    </label>
 
-    <h3>Participants:</h3>
-    <p>{{}}</p>
+    <label for="language">Language:
+        <input type="text" name="language">
+    </label>
+
+    <button type="submit">Create</button>
+
+</form>

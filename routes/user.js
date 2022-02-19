@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const User = require("../models/User.model")
+const Meeting = require("../models/Meeting.model")
 const Api = require("../apis/api")
 
 const isNotLoggedIn = require('../middleware/isNotLoggedIn');
@@ -62,6 +63,20 @@ router.get("/results", isLoggedIn, (req, res, next) => {
   .catch(err=>console.log(err))
 });
 
+router.get("/mymeetings", isLoggedIn, (req, res, next)=>{
+  
+  const id = req.session.userId;
+  console.log("1111111111", id);
+  User.findById(id)
+  .populate("meetings")
+  .then((user)=> {
+    console.log("2222222222222", user);
+    res.render("meetings/my-meetings", user)
+  })
+  .catch(err=>console.log(err))
+})
+
+
 router.get("/:id", isLoggedIn, (req, res, next) => {
   const id = req.params.id
   console.log(id)
@@ -71,7 +86,6 @@ router.get("/:id", isLoggedIn, (req, res, next) => {
   })
   .catch(err=>console.log(err))
 });
-
 
 
 
