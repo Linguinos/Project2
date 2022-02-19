@@ -1,5 +1,5 @@
 function isLoggedIn(req, res, next) {
-	if (req.session.currentUser) {
+	if (req.session.user) {
 		next();
 	} else {
 		res.redirect('/auth/login');
