@@ -15,6 +15,22 @@ const userSchema = new Schema({
 		type: String,
 		required: true
 	},
+	description: {
+		type: String,
+		required: true
+	},
+	city: {
+		type: String,
+		required: true
+	},
+	languageSpeak: {
+		type: String,
+		required: true
+	},
+	languageLearn: {
+		type: String,
+		required: true
+	},
 	imgUrl: {
 		type: String,
 		default: "https://cdn-icons-png.flaticon.com/512/456/456212.png"
