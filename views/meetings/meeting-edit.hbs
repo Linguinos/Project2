@@ -1,13 +1,17 @@
 <h2>Meeting</h2>
 
+<form action="/meetings/{{_id}}/edit" method="POST">
+    <label for="name">Name: 
+        <input type="text" name="name" id="" value="{{name}}">
+    </label>
 
-    <p>{{name}}</p>
-    <p>{{description}}</p>
-    <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png">{{imgUrl}}</p>
-    
-    <h2>Owner</h2>
-    <p>{{owner.fullName}}</p>
-    <h2>More details, please contact:</h2>
-    <p>{{owner.email}}</p>
+    <label for="language">Language: 
+        <input type="text" name="language" id="" value="{{language}}">
+    </label>
 
-<a href="/meetings/{{_id}}/edit"> Edit room </a>
+    <label for="schedule">Schedule: 
+        <input type="text" name="schedule" id="" value="{{schedule}}">
+    </label>
+
+    <button type="submit">Submit</button>
+</form>

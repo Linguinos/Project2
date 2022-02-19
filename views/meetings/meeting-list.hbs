@@ -3,5 +3,8 @@
 
 {{#each meetings}}
     <p>{{name}}</p>
-    <a href="/meeting/{{_id}}">See more details</a>
+    <a href="/meetings/{{_id}}">See more details</a>
 {{/each}}
+
+<a href="/meetings/edit"> <button type="submit">edit Event</button> </a>
+<a href="/meetings/create"> <button type="submit">Create Event</button> </a>
