@@ -6,6 +6,10 @@ const eventSchema = new Schema({
 		type: String,
 		required: true
 	},
+	host: {
+		type: String,
+		required: true
+	},
 	typeOfMeeting: {
 		type: String
 	},
@@ -15,7 +19,10 @@ const eventSchema = new Schema({
 	contactEmail: {
 		type: String
 	},
-	// favorites: [{ type: Schema.Types.ObjectId, ref: 'Room', default: [] }]
+	schedule: {
+		type: String
+	},
+	attendees: [{ type: Schema.Types.ObjectId, ref: 'Profiles', default: [] }]
 });
 
 const Event = model('Event', eventSchema);

@@ -36,11 +36,11 @@ router.get("/profile", isLoggedIn, (req, res, next) => {
 });
 
 router.route("/edit")
-    .get(isLoggedIn, (req, res) => {
+ .get(isLoggedIn, (req, res) => {
       const id = req.session.userId; 
       User.findById(id)
       .then((user)=> res.render("user/profile-edit", user))
-      .post(isLoggedIn, (req, res)=>{
+ .post(isLoggedIn, (req, res)=>{
          const {username, description, city, languageSpeak, languageLearn, imgUrl} = req.body
          const user = req.session.userId
          User.findByIdAndUpdate(id, {username, description, city, languageSpeak, languageLearn, imgUrl})
