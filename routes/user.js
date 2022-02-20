@@ -28,12 +28,14 @@ router.get("/feed", isLoggedIn, (req, res) => {
 router.get("/profile", isLoggedIn, (req, res, next) => {
   const id = req.session.userId;
   User.findById(id)
+  .populate('meetings')
   .then(user => {
     res.render("user/profile-user", user)
     //res.redirect("/")
   })
   //.catch(err=>console.log(err))
 });
+
 
 router.route("/edit")
 .get(isLoggedIn, (req, res) => {
@@ -48,11 +50,14 @@ router.route("/edit")
   const id = req.session.userId;
 
   User.findByIdAndUpdate(id, {username, description, city, languageSpeak, languageLearn, schedule, preferedGender, imgUrl})
-            .then(()=>{
-                res.redirect("/user/profile");
-            })
-            .catch(error=>{res.render("user/profile-edit")})
+    .then(()=>{
+      res.redirect("/user/profile");
+    })
+    .catch(error => {
+      res.render("user/profile-edit")
+    });
 });
+
 
 router.get("/results", isLoggedIn, (req, res, next) => {
   User.find()
@@ -62,10 +67,12 @@ router.get("/results", isLoggedIn, (req, res, next) => {
   .catch(err=>console.log(err))
 });
 
+
 router.get("/mymeetings", isLoggedIn, (req, res, next)=>{
   
   const id = req.session.userId;
   console.log("1111111111", id);
+
   User.findById(id)
   .populate("meetings")
   .then((user)=> {
@@ -79,15 +86,14 @@ router.get("/mymeetings", isLoggedIn, (req, res, next)=>{
 router.get("/:id", isLoggedIn, (req, res, next) => {
   const id = req.params.id
   console.log(id)
+
   User.findById(id)
+  .populate('meetings')
   .then(profile => {
     res.render("user/profile-public", profile)
   })
   .catch(err=>console.log(err))
 });
-
-
-
 
 module.exports = router;
 

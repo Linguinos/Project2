@@ -15,11 +15,13 @@
     <li> Your Picture: <img src="{{imgUrl}}"alt="cat"> </li>    
 </ul>
 
-Events:
+<h3>{{username}}'s events:</h3>
 
-The User {{username}} has hosted the following Events:
-
-{{meetings}}
+{{#each meetings}}
+    <h4>{{name}}</h4>
+    <p>{{language}}</p>
+    <hr>
+{{/each}}
 
 
 The User {{username}} has participated in the following Events:

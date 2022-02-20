@@ -15,9 +15,13 @@ this is your configuration:
     <li> I prefer to meet with:   {{preferedGender}} </li>
     <li> Your Picture: <img src="{{imgUrl}}"alt="cat"> </li>    
 </ul>
-Your Events yeah:
 
-{{meetings}}
+<h3>{{username}}'s events:</h3>
+{{#each meetings}}
+    <h4>{{name}}</h4>
+    <p>{{language}}</p>
+    <hr>
+{{/each}}
 
  <hr>
 
