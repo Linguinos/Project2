@@ -31,7 +31,6 @@ router.get("/profile", isLoggedIn, (req, res, next) => {
   .then(user => {
     res.render("user/profile-user", user)
     //res.redirect("/")
-    console.log(user)
   })
   //.catch(err=>console.log(err))
 });

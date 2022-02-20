@@ -1,10 +1,15 @@
-<h2>Meetings List</h2>
+<h2>All Meetings List</h2>
+<hr>
+<a href="/meetings/create"> <button type="submit">Create Event</button> </a>
 
+<ol>
 
 {{#each meetings}}
-    <p>{{name}}</p>
+    <p>Name of the Event : {{name}}</p>
     <a href="/meetings/{{_id}}">See more details</a>
 {{/each}}
 
-<a href="/meetings/edit"> <button type="submit">edit Event</button> </a>
-<a href="/meetings/create"> <button type="submit">Create Event</button> </a>
+</ol>
+
+
+<a href="/meetings/edit"> <button type="submit">Edit Event</button> </a>
