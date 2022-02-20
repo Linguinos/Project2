@@ -17,19 +17,19 @@ const userSchema = new Schema({
 	},
 	description: {
 		type: String,
-		required: true
+		required: false
 	},
 	city: {
 		type: String,
-		required: true
+		required: false
 	},
 	languageSpeak: {
 		type: String,
-		required: true
+		required: false
 	},
 	languageLearn: {
 		type: String,
-		required: true
+		required: false
 	},
 	imgUrl: {
 		type: String,
