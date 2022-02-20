@@ -35,6 +35,13 @@ const userSchema = new Schema({
 		type: String,
 		default: "https://cdn-icons-png.flaticon.com/512/456/456212.png"
 	},
+	Schedule: {
+		type: String,
+		required: false
+	},
+
+
+	color: { type: String, enum: ['white', 'black', 'brown'] },
 	meetings: [{ type: Schema.Types.ObjectId, ref: 'Meeting', default: [] }]
 });
 
