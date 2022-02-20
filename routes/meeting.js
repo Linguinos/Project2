@@ -50,6 +50,11 @@ router.get('/:id', isLoggedIn, (req, res) => {
     })
 })
 
+router.post("/:id/delete", (req, res, next) => {
+    const id = req.params.id;
+    Meeting.findByIdAndDelete(id)
+        .then(res.redirect("/meetings"))
+})
 
 router.route("/:id/edit")
 .get(isLoggedIn, (req, res) => {
@@ -69,5 +74,7 @@ router.route("/:id/edit")
             })
             .catch(error=>{res.render("meetings/meeting-edit")})
 });
+
+
 
 module.exports = router;
