@@ -40,8 +40,7 @@ const userSchema = new Schema({
 		required: false
 	},
 
-
-	color: { type: String, enum: ['white', 'black', 'brown'] },
+	preferedGender: { type: String, enum: ['men', 'women', 'both'] },
 	meetings: [{ type: Schema.Types.ObjectId, ref: 'Meeting', default: [] }]
 });
 
