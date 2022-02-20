@@ -44,10 +44,10 @@ router.route("/edit")
       
 })
 .post(isLoggedIn, (req, res)=>{
-  const {username, description, city, languageSpeak, languageLearn, imgUrl} = req.body
+  const {username, description, city, languageSpeak, languageLearn, schedule, preferedGender, imgUrl} = req.body
   const id = req.session.userId;
 
-  User.findByIdAndUpdate(id, {username, description, city, languageSpeak, languageLearn, imgUrl})
+  User.findByIdAndUpdate(id, {username, description, city, languageSpeak, languageLearn, schedule, preferedGender, imgUrl})
             .then(()=>{
                 res.redirect("/user/profile");
             })

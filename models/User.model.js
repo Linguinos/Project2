@@ -35,7 +35,7 @@ const userSchema = new Schema({
 		type: String,
 		default: "https://cdn-icons-png.flaticon.com/512/456/456212.png"
 	},
-	Schedule: {
+	schedule: {
 		type: String,
 		required: false
 	},
