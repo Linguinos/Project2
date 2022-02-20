@@ -2,10 +2,12 @@ const express = require('express');
 const router = express.Router();
 
 const User = require("../models/User.model")
+const Meeting = require("../models/Meeting.model")
 const Api = require("../apis/api")
 
 const isNotLoggedIn = require('../middleware/isNotLoggedIn');
 const isLoggedIn = require('../middleware/isLoggedIn');
+const { get } = require('.');
 
 /* GET users listing. 
 router.get('/', function(req, res, next) {
@@ -25,31 +27,66 @@ router.get("/feed", isLoggedIn, (req, res) => {
 
 router.get("/profile", isLoggedIn, (req, res, next) => {
   const id = req.session.userId;
-  console.log("1", id);
   User.findById(id)
   .then(user => {
-    res.render("user/profile-user")
+    res.render("user/profile-user", user)
     //res.redirect("/")
-    console.log(user)
   })
   //.catch(err=>console.log(err))
 });
 
 router.route("/edit")
- .get(isLoggedIn, (req, res) => {
-      const id = req.session.userId; 
-      User.findById(id)
-      .then((user)=> res.render("user/profile-edit", user))
- .post(isLoggedIn, (req, res)=>{
-         const {username, description, city, languageSpeak, languageLearn, imgUrl} = req.body
-         const user = req.session.userId
-         User.findByIdAndUpdate(id, {username, description, city, languageSpeak, languageLearn, imgUrl})
+.get(isLoggedIn, (req, res) => {
+  const id = req.session.userId; 
+  
+  User.findById(id)
+    .then((user)=> res.render("user/profile-edit", user))
+      
+})
+.post(isLoggedIn, (req, res)=>{
+  const {username, description, city, languageSpeak, languageLearn, imgUrl} = req.body
+  const id = req.session.userId;
+
+  User.findByIdAndUpdate(id, {username, description, city, languageSpeak, languageLearn, imgUrl})
             .then(()=>{
-                res.redirect("/user/profile-user");
+                res.redirect("/user/profile");
             })
             .catch(error=>{res.render("user/profile-edit")})
-            })
- });
+});
+
+router.get("/results", isLoggedIn, (req, res, next) => {
+  User.find()
+  .then(profiles => {
+    res.render("user/profile-results", {profiles})
+  })
+  .catch(err=>console.log(err))
+});
+
+router.get("/mymeetings", isLoggedIn, (req, res, next)=>{
+  
+  const id = req.session.userId;
+  console.log("1111111111", id);
+  User.findById(id)
+  .populate("meetings")
+  .then((user)=> {
+    console.log("2222222222222", user);
+    res.render("meetings/my-meetings", user)
+  })
+  .catch(err=>console.log(err))
+})
+
+
+router.get("/:id", isLoggedIn, (req, res, next) => {
+  const id = req.params.id
+  console.log(id)
+  User.findById(id)
+  .then(profile => {
+    res.render("user/profile-public", profile)
+  })
+  .catch(err=>console.log(err))
+});
+
+
 
 module.exports = router;
 

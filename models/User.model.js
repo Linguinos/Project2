@@ -17,25 +17,32 @@ const userSchema = new Schema({
 	},
 	description: {
 		type: String,
-		required: true
+		required: false
 	},
 	city: {
 		type: String,
-		required: true
+		required: false
 	},
 	languageSpeak: {
 		type: String,
-		required: true
+		required: false
 	},
 	languageLearn: {
 		type: String,
-		required: true
+		required: false
 	},
 	imgUrl: {
 		type: String,
 		default: "https://cdn-icons-png.flaticon.com/512/456/456212.png"
-	}
-	// favorites: [{ type: Schema.Types.ObjectId, ref: 'Room', default: [] }]
+	},
+	Schedule: {
+		type: String,
+		required: false
+	},
+
+
+	color: { type: String, enum: ['white', 'black', 'brown'] },
+	meetings: [{ type: Schema.Types.ObjectId, ref: 'Meeting', default: [] }]
 });
 
 const User = model('User', userSchema);

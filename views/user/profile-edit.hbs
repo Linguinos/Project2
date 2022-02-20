@@ -2,49 +2,53 @@
 
 <form action="/user/edit" method="POST">
   <label for="username"> Username:
-    <input type="text" name="username" />
+    <input type="text" name="username" value="{{username}}"/>
   </label>
   <br>
 
   <label for="description"> Bio:
-    <input type="text" name="description"/> 
+    <input type="text" name="description" value="{{description}}"/> 
   </label>
   <br>
   
   <label for="city"> City:
-    <input type="text" name="city"/> 
+    <input type="text" name="city" value="{{city}}"/> 
   </label>
   <br>
 
   <label for="languageSpeak"> Languages I speak:
-    <input type="text" name="languageSpeak"/> 
+    <input type="text" name="languageSpeak" value="{{languageSpeak}}"/> 
   </label>
   <br>
 
   <label for="languageLearn"> Languages I want to learn:
-    <input type="text" name="languageLearn"/> 
+    <input type="text" name="languageLearn" value="{{languageLearn}}"/> 
   </label>
   <br>
-
-  <label> Profile picture:
-    <img src="/iron-rooms/public/images/roomaribnb.jpg" name="imgUrl"/>
-  </label>
-  <br>
-
- <label> Fav meme:
-    <input type="image" name="meme"/> 
-  </label>
-   <br>
 
  <label> Preferred schedule:
-    <input type="date" name="schedule"/> 
+    <input type="text" name="schedule"/> 
   </label>
    <br>
 
-<label> Preferences:
+  <label> Profile picture:
+    <input type="file" name="imgUrl" id="picture" value="imgUrl">
+  </label>
+  <br>
+
+
+  <!--<label> Preferences:
     <input type="text" name="preferences"/> 
   </label>
    <br>
 
+    <label> Fav meme:
+    <input type="image" name="meme"/> 
+  </label>
+   <br> -->
+
+
+
   <button type="submit"> Update profile </button>
 </form>
+

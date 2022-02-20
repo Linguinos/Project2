@@ -1,30 +1,27 @@
 const { Schema, model } = require('mongoose');
 
 
-const eventSchema = new Schema({
-	name: {
-		type: String,
-		required: true
-	},
-	host: {
-		type: String,
-		required: true
-	},
-	typeOfMeeting: {
-		type: String
-	},
-    language: {
-        type: String 
+const meetingSchema = new Schema({
+    name: {
+        type: String,
+        required: true
     },
-	contactEmail: {
-		type: String
-	},
-	schedule: {
-		type: String
-	},
-	attendees: [{ type: Schema.Types.ObjectId, ref: 'Profiles', default: [] }]
+    host: { type: Schema.Types.ObjectId, ref: 'User'},
+    typeOfMeeting: {
+        type: String
+    },
+    language: {
+        type: String
+    },
+    contactEmail: {
+        type: String
+    },
+    schedule: {
+        type: String
+    },
+    attendees: [{ type: Schema.Types.ObjectId, ref: 'User', default: [] }]
 });
 
-const Event = model('Event', eventSchema);
+const Meeting = model('Meeting', meetingSchema);
 
-module.exports = Event;
+module.exports = Meeting;

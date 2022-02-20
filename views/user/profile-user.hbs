@@ -1,3 +1,23 @@
 <h2>Profile</h2>
 
+Hello {{this.username}}
+<br>
+this is your configuration:
 
+<ul>
+    <li> Username:   {{username}} </li>
+    <li> Pasword:   {{password}} </li>
+    <li> email:   {{email}} </li>
+    <li> Bio:   {{description}} </li>
+    <li> City:   {{city}} </li>
+    <li> Language you speak:   {{languageSpeak}} </li>
+    <li> Language you want to learn:   {{languageLearn}} </li>
+    <li> Your Picture: <img src="{{imgUrl}}"alt="cat">  </li>    
+</ul>
+Your Events:
+
+{{meetings}}
+
+ <hr>
+
+<a href="/user/edit"> <button type="submit">Edit</button> </a>
