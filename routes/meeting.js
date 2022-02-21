@@ -78,11 +78,15 @@ router.post("/:id/delete", (req, res, next) => {
 
 router.route("/:id/edit")
 .get(isLoggedIn, (req, res) => {
-  const id = req.params.id; 
-  console.log(id)
-  Meeting.findById(id)
-    .then((meeting) => res.render("meetings/meeting-edit", meeting))
-    .catch(error => console.log(error));
+    const id = req.params.id;
+
+    Meeting.findById(id)
+        .populate('host')
+        .then((meeting) => {
+            if(meeting.host._id != req.session.userId) res.redirect(`/meetings/${meeting._id}`);
+            else res.render("meetings/meeting-edit", meeting);
+        })
+        .catch(error => console.log(error));
 })
 .post(isLoggedIn, (req, res)=>{
   const {name, typeOfMeeting, language, schedule, time, city} = req.body
