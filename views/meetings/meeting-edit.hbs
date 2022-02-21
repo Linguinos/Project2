@@ -5,18 +5,44 @@
         <input type="text" name="name" id="" value="{{name}}">
     </label>
 
-    <label for="typeOfMeeting">Type of meeting: 
-        <input type="text" name="typeOfMeeting" id="" value="{{typeOfMeeting}}">
+    <label for="typeOfMeeting"> Type of event:
+        <select name="typeOfMeeting"> 
+            <option value="1-on-1">1-on-1</option>
+            <option value="Study Group">Study Group</option>
+            <option value="Beers and fun">Beers and Fun</option>
+            <option value="Book Club">Book Club</option>
+        </select>
     </label>
 
-    <label for="language">Language: 
-        <input type="text" name="language" id="" value="{{language}}">
+    <label for="language"> Type of event:
+        <select name="language"> 
+            <option value="English">English</option>
+            <option value="Spanish">Spanish</option>
+            <option value="Catalan">Catalan</option>
+            <option value="French">French</option>
+            <option value="Italian">Italian</option>
+            <option value="German">German</option>
+            <option value="Chinese">Chinese</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Hindi">Hindi</option>
+            <option value="Russian">Russian</option>
+            <option value="Dutch">Dutch</option>
+            <option value="Swedish">Swedish</option>
+            <option value="Portuguese">Portuguese</option>
+            <option value="Korean">Korean</option>
+            <option value="Polish">Polish</option>
+            <option value="Greek">Greek</option>
+            <option value="Others">Others</option>
+        </select>
     </label>
 
-    <label for="schedule">Schedule: 
-        <input type="text" name="schedule" id="" value="{{schedule}}">
+    <label for="schedule">Day: 
+        <input type="date" name="schedule" id="" value="{{schedule}}">
     </label>
 
+    <label for="time">Time: 
+        <input type="time" name="time" id="" value="{{time}}">
+    </label>
     
 <hr>
     <button type="submit">Save changes</button>

@@ -8,16 +8,28 @@ const meetingSchema = new Schema({
     },
     host: { type: Schema.Types.ObjectId, ref: 'User'},
     typeOfMeeting: {
-        type: String
+        type: String,
+        enum: ['1-on-1', 'Study Group', 'Beers and fun', 'Book Club']
     },
     language: {
-        type: String
+        type: String,
+        enum: ['English', 'Spanish', 'Catalan',
+        'French', 'Italian', 'German',
+        'Chinese', 'Japanese', 'Hindi',
+        'Russian', 'Dutch', 'Swedish',
+        'Portuguese', 'Korean', 'Polish',
+        'Greek', 'Others']
     },
     contactEmail: {
         type: String
     },
     schedule: {
-        type: String
+        type: String,
+        required: true
+    },
+    time: {
+        type: String,
+        required: true
     },
     attendees: [{ type: Schema.Types.ObjectId, ref: 'User', default: [] }]
 });

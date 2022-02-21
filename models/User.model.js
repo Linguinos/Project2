@@ -25,11 +25,23 @@ const userSchema = new Schema({
 	},
 	languageSpeak: {
 		type: String,
-		required: false
+		required: false,
+		enum: ['English', 'Spanish', 'Catalan',
+        'French', 'Italian', 'German',
+        'Chinese', 'Japanese', 'Hindi',
+        'Russian', 'Dutch', 'Swedish',
+        'Portuguese', 'Korean', 'Polish',
+        'Greek', 'Others']
 	},
 	languageLearn: {
 		type: String,
-		required: false
+		required: false,
+		enum: ['English', 'Spanish', 'Catalan',
+        'French', 'Italian', 'German',
+        'Chinese', 'Japanese', 'Hindi',
+        'Russian', 'Dutch', 'Swedish',
+        'Portuguese', 'Korean', 'Polish',
+        'Greek', 'Others']
 	},
 	imgUrl: {
 		type: String,
