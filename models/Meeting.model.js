@@ -35,6 +35,10 @@ const meetingSchema = new Schema({
         type: String,
         required: true
     },
+    description: {
+		type: String,
+		required: true
+	},
     attendees: [{ type: Schema.Types.ObjectId, ref: 'User', default: [] }]
 });
 
