@@ -32,7 +32,7 @@ router.route('/create')
     res.render('meetings/meeting-create')
 })
 .post(isLoggedIn, (req, res) => {
-    const {name, typeOfMeeting, language, schedule, time, city} = req.body;
+    const {name, typeOfMeeting, language, schedule, time, city, description} = req.body;
     const host = req.session.userId;
 
     console.log("11111111111111111111111111111", host);
@@ -41,7 +41,7 @@ router.route('/create')
     .then((user) => {
         const host = user._id;
 
-        Meeting.create({name, host, typeOfMeeting, language, schedule, time, city})
+        Meeting.create({name, host, typeOfMeeting, language, schedule, time, city, description})
         .then((meeting)=>{
             console.log("2222222222222222222", meeting);
 
@@ -89,10 +89,10 @@ router.route("/:id/edit")
         .catch(error => console.log(error));
 })
 .post(isLoggedIn, (req, res)=>{
-  const {name, typeOfMeeting, language, schedule, time, city} = req.body
+  const {name, typeOfMeeting, language, schedule, time, city, description} = req.body
   const id = req.params.id;
 
-  Meeting.findByIdAndUpdate(id, {name, typeOfMeeting, language, schedule, time, city})
+  Meeting.findByIdAndUpdate(id, {name, typeOfMeeting, language, schedule, time, city, description})
     .then((meeting)=>{
         res.redirect(`/meetings/${meeting._id}`);
     })
