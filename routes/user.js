@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
+const fileUploader = require("../config/cloudinary");
 const User = require("../models/User.model")
 const Meeting = require("../models/Meeting.model")
 const Api = require("../apis/api")
@@ -45,13 +45,19 @@ router.route("/edit")
     .then((user)=> res.render("user/profile-edit", user))
       
 })
-.post(isLoggedIn, (req, res)=>{
-  const {username, description, city, languageSpeak, languageLearn, schedule, preferedGender, imgUrl} = req.body
-  const id = req.session.userId;
 
-  User.findByIdAndUpdate(id, {username, description, city, languageSpeak, languageLearn, schedule, preferedGender, imgUrl})
-    .then(()=>{
+.post(isLoggedIn, fileUploader.single("imgUrl"), (req, res)=>{
+
+  
+  const {username, description, city, languageSpeak, languageLearn, schedule, meetingPreference} = req.body
+  const id = req.session.userId;
+  const imgUrl = req.file.path // cloudinary URL in path.
+
+
+  User.findByIdAndUpdate(id, {username, description, city, languageSpeak, languageLearn, imgUrl, schedule, meetingPreference})
+    .then((user)=>{
       res.redirect("/user/profile");
+      console.log("22222222", imgUrl)
     })
     .catch(error => {
       res.render("user/profile-edit")

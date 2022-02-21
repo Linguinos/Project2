@@ -50,7 +50,8 @@ router.route('/signup')
             })
             .then((user) => {
                 req.session.user = user;
-                res.redirect('/auth/login');
+                req.session.userId = user._id;
+                res.redirect('/user/feed');
             })
             .catch((error) => {
                 if (error instanceof mongoose.Error.ValidationError) {
