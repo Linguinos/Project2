@@ -90,7 +90,7 @@ router.post('/:id/join', isLoggedIn, (req, res, next) => {
 
     Meeting.findById(id)
     .then((meeting) => {
-        if(meeting.attendees.includes(req.session.userId) || req.session.userId === meeting.host) {
+        if(meeting.attendees.includes(req.session.userId) || req.session.userId == meeting.host) {
             res.redirect(`/meetings/${meeting._id}`);
 
         } else {
