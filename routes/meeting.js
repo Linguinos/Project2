@@ -8,10 +8,21 @@ const Api = require("../apis/api")
 const isNotLoggedIn = require('../middleware/isNotLoggedIn');
 const isLoggedIn = require('../middleware/isLoggedIn');
 
-router.get("/", isLoggedIn, (req, res) => {
+router.route("/")
+.get(isLoggedIn, (req, res) => {
     Meeting.find()
     .then((meetings) => {
           res.render("meetings/meeting-list", {meetings})})
+    .catch(err=>console.log(err))
+})
+.post(isLoggedIn, (req, res, next) => {
+
+    const language = req.body.language
+   
+    Meeting.find( {language: language} )
+    .then((meetings => {
+      res.render("meetings/meeting-list", {meetings})
+    }))  
     .catch(err=>console.log(err))
 });
 
@@ -21,7 +32,7 @@ router.route('/create')
     res.render('meetings/meeting-create')
 })
 .post(isLoggedIn, (req, res) => {
-    const {name, typeOfMeeting, language, schedule, time} = req.body;
+    const {name, typeOfMeeting, language, schedule, time, city} = req.body;
     const host = req.session.userId;
 
     console.log("11111111111111111111111111111", host);
@@ -30,7 +41,7 @@ router.route('/create')
     .then((user) => {
         const host = user._id;
 
-        Meeting.create({name, host, typeOfMeeting, language, schedule, time})
+        Meeting.create({name, host, typeOfMeeting, language, schedule, time, city})
         .then((meeting)=>{
             console.log("2222222222222222222", meeting);
 
@@ -74,10 +85,10 @@ router.route("/:id/edit")
     .catch(error => console.log(error));
 })
 .post(isLoggedIn, (req, res)=>{
-  const {name, typeOfMeeting, language, schedule, time} = req.body
+  const {name, typeOfMeeting, language, schedule, time, city} = req.body
   const id = req.params.id;
 
-  Meeting.findByIdAndUpdate(id, {name, typeOfMeeting, language, schedule, time})
+  Meeting.findByIdAndUpdate(id, {name, typeOfMeeting, language, schedule, time, city})
     .then((meeting)=>{
         res.redirect(`/meetings/${meeting._id}`);
     })

@@ -52,38 +52,51 @@ router.route("/edit")
   
   const {username, description, city, languageSpeak, languageLearn, schedule, meetingPreference} = req.body
   const id = req.session.userId;
-  const imgUrl = req.file.path // cloudinary URL in path.
+  const imgUrl = req.file && req.file.path // cloudinary URL in path.
 
 
   User.findByIdAndUpdate(id, {username, description, city, languageSpeak, languageLearn, imgUrl, schedule, meetingPreference})
     .then((user)=>{
       res.redirect("/user/profile");
-      console.log("22222222", imgUrl)
     })
     .catch(error => {
       res.render("user/profile-edit")
     });
 });
 
-
-router.get("/results", isLoggedIn, (req, res, next) => {
+router.route("/results")
+.get(isLoggedIn, (req, res, next) => {
   User.find()
   .then(profiles => {
     res.render("user/profile-results", {profiles})
   })
   .catch(err=>console.log(err))
-});
+})
+
+.post(isLoggedIn, (req, res, next) => {
+
+  const languageLearn = req.body.languageLearn
+  const languageSpeak = req.body.languageSpeak
+  const meetingPreference = req.body.meetingPreference
+
+  console.log(languageLearn, languageSpeak, meetingPreference);
+
+  User.find( {languageLearn: languageLearn, languageSpeak: languageSpeak, meetingPreference: meetingPreference} )
+  .then((profiles => {
+    res.render("user/profile-results", {profiles})
+    console.log(profiles);
+  }))  
+  .catch(err=>console.log(err))
+})
 
 
 router.get("/mymeetings", isLoggedIn, (req, res, next)=>{
   
   const id = req.session.userId;
-  console.log("1111111111", id);
 
   User.findById(id)
   .populate("meetings")
   .then((user)=> {
-    console.log("2222222222222", user);
     res.render("meetings/my-meetings", user)
   })
   .catch(err=>console.log(err))
