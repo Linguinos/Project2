@@ -1,6 +1,6 @@
 <h2>Edit profile</h2>
 
-<form action="/user/edit" method="POST">
+<form action="/user/edit" method="POST" enctype="multipart/form-data">
   <label for="username"> Username:
     <input type="text" name="username" value="{{username}}"/>
   </label>
@@ -31,35 +31,20 @@
   </label>
    <br>
 
- <label> I prefer to meet with:
-   <select name="preferedGender"> 
-     <option value="men">Men</option>
-     <option value="women">Women</option>
+ <label> I prefer to meet:
+   <select name="meetingPreference"> 
+     <option value="online">online</option>
+     <option value="in-person">in-person</option>
      <option value="both">Both</option>
    </select>
   </label>
 
-
-
    <br>
 
   <label> Profile picture:
-    <input type="file" name="imgUrl" id="picture" value="imgUrl">
+    <input type="file" name="imgUrl">
   </label>
   <br>
-
-
-  <!--<label> Preferences:
-    <input type="text" name="preferences"/> 
-  </label>
-   <br>
-
-    <label> Fav meme:
-    <input type="image" name="meme"/> 
-  </label>
-   <br> -->
-
-
 
   <button type="submit"> Update profile </button>
 </form>

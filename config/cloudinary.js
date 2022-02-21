@@ -13,9 +13,10 @@ cloudinary.config(
 const storage = new CloudinaryStorage({
   cloudinary,
   params: {
-    allowed_formats: ['svg', 'png', 'jpg'],
-    folder: 'cloudinary-test' // Folder name on the Cloudinary disk
+    allowed_formats: ['svg', 'png', 'jpg', 'pdf', 'tif', 'wep'],
+    folder: 'cappuccino' // Folder name on the Cloudinary disk
   }
 })
+
 
 module.exports = multer({storage}) // Multer will be responsible for reading the forma and store on the cloud
