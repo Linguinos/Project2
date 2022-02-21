@@ -49,6 +49,7 @@ router.get('/:id', isLoggedIn, (req, res) => {
 
     Meeting.findById(id)
     .populate('host')
+    .populate('attendees')
     .then((meeting) => {
         res.render('meetings/meeting-details', meeting)
     })
@@ -82,6 +83,50 @@ router.route("/:id/edit")
     })
     .catch(error=>{res.render("meetings/meeting-edit")});
 });
+
+
+router.post('/:id/join', isLoggedIn, (req, res, next) => {
+    const id = req.params.id;
+
+    Meeting.findById(id)
+    .then((meeting) => {
+        if(meeting.attendees.includes(req.session.userId) || req.session.userId === meeting.host) {
+            res.redirect(`/meetings/${meeting._id}`);
+
+        } else {
+            Meeting.findByIdAndUpdate(id, {$push: {attendees: req.session.userId}})
+            .populate('attendees')
+            .then((meeting) => {
+                res.redirect(`/meetings/${meeting._id}`);
+            })
+            .catch(error => console.log(error));
+        };
+    })
+    .catch(error => console.log(error));
+
+    
+});
+
+/*
+const {name, typeOfMeeting, language} = req.body;
+const host = req.session.userId;
+
+console.log("11111111111111111111111111111", host);
+
+User.findById(host)
+.then((user) => {
+    const host = user._id;
+
+    Meeting.create({name, host, typeOfMeeting, language})
+    .then((meeting)=>{
+        console.log("2222222222222222222", meeting);
+
+        User.findByIdAndUpdate(req.session.userId, {$push: {meetings: meeting._id}})
+        .then(() => {
+            res.redirect('/meetings');
+        })
+    })
+})*/
 
 
 
