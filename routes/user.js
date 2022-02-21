@@ -29,6 +29,7 @@ router.get("/profile", isLoggedIn, (req, res, next) => {
   const id = req.session.userId;
   User.findById(id)
   .populate('meetings')
+  .populate('meetingsAttended')
   .then(user => {
     res.render("user/profile-user", user)
     //res.redirect("/")
