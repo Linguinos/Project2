@@ -74,12 +74,12 @@ router.route("/:id/edit")
     .catch(error => console.log(error));
 })
 .post(isLoggedIn, (req, res)=>{
-  const {name, typeOfMeeting, language} = req.body
+  const {name, typeOfMeeting, language, schedule} = req.body
   const id = req.params.id;
 
-  Meeting.findByIdAndUpdate(id, {name, typeOfMeeting, language})
+  Meeting.findByIdAndUpdate(id, {name, typeOfMeeting, language, schedule})
     .then((meeting)=>{
-        res.render("meetings/meeting-details", meeting);
+        res.redirect(`/meetings/${meeting._id}`);
     })
     .catch(error=>{res.render("meetings/meeting-edit")});
 });
@@ -95,9 +95,14 @@ router.post('/:id/join', isLoggedIn, (req, res, next) => {
 
         } else {
             Meeting.findByIdAndUpdate(id, {$push: {attendees: req.session.userId}})
-            .populate('attendees')
+            .populate('host')
             .then((meeting) => {
-                res.redirect(`/meetings/${meeting._id}`);
+
+                User.findByIdAndUpdate(req.session.userId, {$push: {meetingsAttended: id}})
+                .then((user)=>{
+                    console.log('ATTENDED MEETINGS: ',user.meetingsAttended);
+                    res.redirect(`/meetings/${meeting._id}`);
+                })
             })
             .catch(error => console.log(error));
         };

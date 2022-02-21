@@ -41,7 +41,8 @@ const userSchema = new Schema({
 	},
 
 	meetingPreference: { type: String, enum: ['online', 'in-person', 'both'] },
-	meetings: [{ type: Schema.Types.ObjectId, ref: 'Meeting', default: [] }]
+	meetings: [{ type: Schema.Types.ObjectId, ref: 'Meeting', default: [] }],
+	meetingsAttended: [{ type: Schema.Types.ObjectId, ref: 'Meeting', default: [] }]
 });
 
 const User = model('User', userSchema);

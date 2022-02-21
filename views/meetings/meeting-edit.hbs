@@ -5,6 +5,10 @@
         <input type="text" name="name" id="" value="{{name}}">
     </label>
 
+    <label for="typeOfMeeting">Type of meeting: 
+        <input type="text" name="typeOfMeeting" id="" value="{{typeOfMeeting}}">
+    </label>
+
     <label for="language">Language: 
         <input type="text" name="language" id="" value="{{language}}">
     </label>
@@ -15,7 +19,7 @@
 
     
 <hr>
-    <button type="submit">Edit Event</button>
+    <button type="submit">Save changes</button>
 </form>
 
  <form action="/meetings/{{_id}}/delete" method="POST">

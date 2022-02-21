@@ -18,12 +18,16 @@
 <h3>{{username}}'s events:</h3>
 
 {{#each meetings}}
-    <h4>{{name}}</h4>
+    <a href="/meetings/{{_id}}"><h4>{{name}}</h4></a>
     <p>{{language}}</p>
     <hr>
 {{/each}}
 
 
 The User {{username}} has participated in the following Events:
+
+{{#each meetingsAttended}}
+    <a href="/meetings/{{_id}}"><h4>{{name}}</h4></a>
+{{/each}}
 
  <hr>

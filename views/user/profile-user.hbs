@@ -18,7 +18,7 @@ this is your configuration:
 
 <h3>{{username}}'s events:</h3>
 {{#each meetings}}
-    <h4>{{name}}</h4>
+    <a href="/meetings/{{_id}}"><h4>{{name}}</h4></a>
     <p>{{language}}</p>
     <hr>
 {{/each}}

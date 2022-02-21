@@ -3,12 +3,12 @@
     
     <p>Name of the Event: {{name}}</p>
     <p>The host: {{host.username}}</p>
+    <p>Contact email: {{host.email}}</p>
     <p>Language: {{language}}</p>
-    <p>Contact email: {{contactEmail}}</p>
-    <p>Schedule: {{Schedule}}</p>
+    <p>Schedule: {{schedule}}</p>
     <p>Atendees: </p>
     {{#each attendees}}
-        <p>{{username}}</p>
+        <a href="/user/{{_id}}"><p>{{username}}</p></a>
     {{/each}}
 
     <form action="/meetings/{{_id}}/join" method="POST">

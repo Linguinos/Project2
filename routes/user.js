@@ -95,6 +95,7 @@ router.get("/:id", isLoggedIn, (req, res, next) => {
 
   User.findById(id)
   .populate('meetings')
+  .populate('meetingsAttended')
   .then(profile => {
     res.render("user/profile-public", profile)
   })
