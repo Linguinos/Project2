@@ -23,6 +23,12 @@ this is your configuration:
     <hr>
 {{/each}}
 
+<h3>{{username}} has joined the following events:</h3>
+
+{{#each meetingsAttended}}
+    <a href="/meetings/{{_id}}"><h4>{{name}}</h4></a>
+{{/each}}
+
  <hr>
 
 <a href="/user/edit"> <button type="submit">Edit your profile</button></a>
