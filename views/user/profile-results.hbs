@@ -1,10 +1,9 @@
 <section class="flexAleix" id="resultsSearchSection">
     <div class="flexResults">
 
-        <form action="/user/results" method="POST">
+        <form action="/user/results" method="POST" class="formProfiles">
             <div class="flexFormInputs">
                 <div class="flexLabels">
-                    <p>I can speak</p>
                     <label for="languageSpeak">
                         <select name="languageSpeak"> 
                                 <option value="English">English</option>
@@ -29,7 +28,6 @@
                 </div>
 
                 <div class="flexLabels">
-                    <p>I want to learn</p>
                     <label for="languageLearn">
                             <select name="languageLearn"> 
                                 <option value="English">English</option>
@@ -53,13 +51,16 @@
                     </label>
                 </div>
 
-                <label for="meetingPreference">
-                <select name="meetingPreference"> 
-                    <option value="online">online</option>
-                    <option value="in-person">in-person</option>
-                    <option value="both">Both</option>
-                </select>
-                </label>
+                <div class="flexLabels">
+                    <label for="meetingPreference">
+                    <select name="meetingPreference"> 
+                        <option value="online">online</option>
+                        <option value="in-person">in-person</option>
+                        <option value="both">Both</option>
+                    </select>
+                    </label>
+                </div>
+
             </div>
             <div class="flexFormInputs">
                 <button type="submit">Find Profiles</button>
@@ -70,14 +71,27 @@
     </div>
 </section>
 
-<section class="flexAleix">
-    <h2>Brwose all profiles</h2>
+<section class="flexAleix" id="resultsListSection">
+    <h2>Brwose profiles</h2>
 
-    {{#each profiles}}
-        <h3>{{username}}</h3>
-        <p>{{city}}</p>
-        <p>{{description}}</p>
+    <div>
+        {{#each profiles}}
 
-        <a href="/user/{{_id}}">See more details</a>
-    {{/each}}
+            <div class="flexProfile">
+                <div>
+                    <h3>{{username}}</h3>
+                    <div>
+                        <div class="imgContainer">
+                            <img src="{{imgUrl}}" alt="" class="profileImgResults">
+                        </div>
+
+                        <p>{{city}}</p>
+                        <p>{{description}}</p>
+                        <a href="/user/{{_id}}">See more details</a>
+                    </div>
+                </div>
+            </div>
+
+        {{/each}}
+    </div>
 </section>

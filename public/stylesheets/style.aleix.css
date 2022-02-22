@@ -33,13 +33,40 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 10px;
-    width: 600px;
+    width: 700px;
     
 }
 
 .flexLabels {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formProfiles input {
+    width: 500px;
+}
+
+.flexProfile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.imgContainer{
+    width: 100px;
+    height: 100px;
+}
+
+.profileImgResults {
+    width: auto;
+    max-height: 100%;
 }
 
 .width80 {
@@ -75,4 +102,8 @@
     background-color: #ffcb47;
     height: 300px;
     padding-top: 80px;
+}
+
+#resultsListSection {
+    background-color: #ffe2fe;
 }
