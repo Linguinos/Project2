@@ -1,22 +1,42 @@
+<div class="login-container">
+<section class="form">
 <h2>Log in</h2>
 
+<div class="form-details">
 <form action="/auth/login" method="POST">
-   <label> Full Name:
+
+  <div class="element">
+   <label> Name:
       <input type="text" name="username">
    </label>
+  </div>
+
+  <div class="element">
    <label> Email:
       <input type="email" name="email">
    </label>
+   </div>
+
+  <div class="element">
    <label> Password:
       <input type="password" name="password">
    </label>
+  </div>
 
+  <div id="submit-btn">
    <button type="submit">Submit</button>
+  </div>
 </form>
+</div>
 
+<div id="home-btn">
 <form action="/" method="GET">
-  <button type="submit">Back to Home</button>
+  <button type="submit">Back Home</button>
 </form>
+</div>
+</section>
+</div>
+
 
 {{#if errorMessage}}
    {{errorMessage}}
