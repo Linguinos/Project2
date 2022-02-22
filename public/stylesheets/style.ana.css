@@ -1,5 +1,5 @@
 .form{
-    background-color: #6ccff6;
+    background-color: #fcfcfc;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -8,7 +8,7 @@
 }
 
 .form-details{
-    background-color: #6ccff6;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,15 +17,18 @@
     height: 50vh;
 }
 
-#submit-btn{
+.submit-btn{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    align-items: center;
+    margin: 5px;
 }
 
-#home-btn{
+#signup-btn{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .element{
