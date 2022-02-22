@@ -6,12 +6,17 @@
     <h2> MEET NEW PEOPLE, JOIN EVENTS OR CREATE NEW ONES AND, MOST IMPORTANTLY HAVE FUN! </h2>
 
      <form action="/auth/signup" method="GET">
-       <button type="submit" id="index-button">Sign up</button>
+       <button type="submit" id="index-singUpButton">Sign up</button>
      </form>
 
      <div id="login">
+
        <p>Already a member?</p>
-     <a href="/auth/login">Log in</a>
+
+          <form action="/auth/signup" method="GET">
+       <button type="submit"  id="index-logInButton">Log in</button>
+
+     </form>
      </div>
 
    </section>

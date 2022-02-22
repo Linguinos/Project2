@@ -33,10 +33,16 @@
     margin: 10px;
 }
 
-#index-button {
+#index-singUpButton {
     margin: 30px;
 }
 
+#index-logInButton {
+    background-color: white;
+    color: black;
+    border: 1px solid grey;
+    border-radius: 20%;
+}
 
 
 
