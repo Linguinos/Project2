@@ -1,66 +1,76 @@
+<section class="flexAleix" id="resultsSearchSection">
+    <div class="flexResults">
 
-<section>
-    <div>
         <form action="/user/results" method="POST">
-            <label for="languageSpeak"> I want to learn:
-                <select name="languageSpeak"> 
-                        <option value="English">English</option>
-                        <option value="Spanish">Spanish</option>
-                        <option value="Catalan">Catalan</option>
-                        <option value="French">French</option>
-                        <option value="Italian">Italian</option>
-                        <option value="German">German</option>
-                        <option value="Chinese">Chinese</option>
-                        <option value="Japanese">Japanese</option>
-                        <option value="Hindi">Hindi</option>
-                        <option value="Russian">Russian</option>
-                        <option value="Dutch">Dutch</option>
-                        <option value="Swedish">Swedish</option>
-                        <option value="Portuguese">Portuguese</option>
-                        <option value="Korean">Korean</option>
-                        <option value="Polish">Polish</option>
-                        <option value="Greek">Greek</option>
-                        <option value="Others">Others</option>
-                    </select>
-            </label>
-            <br>
+            <div class="flexFormInputs">
+                <div class="flexLabels">
+                    <p>I can speak</p>
+                    <label for="languageSpeak">
+                        <select name="languageSpeak"> 
+                                <option value="English">English</option>
+                                <option value="Spanish">Spanish</option>
+                                <option value="Catalan">Catalan</option>
+                                <option value="French">French</option>
+                                <option value="Italian">Italian</option>
+                                <option value="German">German</option>
+                                <option value="Chinese">Chinese</option>
+                                <option value="Japanese">Japanese</option>
+                                <option value="Hindi">Hindi</option>
+                                <option value="Russian">Russian</option>
+                                <option value="Dutch">Dutch</option>
+                                <option value="Swedish">Swedish</option>
+                                <option value="Portuguese">Portuguese</option>
+                                <option value="Korean">Korean</option>
+                                <option value="Polish">Polish</option>
+                                <option value="Greek">Greek</option>
+                                <option value="Others">Others</option>
+                            </select>
+                    </label>
+                </div>
 
-            <label for="languageLearn"> I can teach:
-                    <select name="languageLearn"> 
-                        <option value="English">English</option>
-                        <option value="Spanish">Spanish</option>
-                        <option value="Catalan">Catalan</option>
-                        <option value="French">French</option>
-                        <option value="Italian">Italian</option>
-                        <option value="German">German</option>
-                        <option value="Chinese">Chinese</option>
-                        <option value="Japanese">Japanese</option>
-                        <option value="Hindi">Hindi</option>
-                        <option value="Russian">Russian</option>
-                        <option value="Dutch">Dutch</option>
-                        <option value="Swedish">Swedish</option>
-                        <option value="Portuguese">Portuguese</option>
-                        <option value="Korean">Korean</option>
-                        <option value="Polish">Polish</option>
-                        <option value="Greek">Greek</option>
-                        <option value="Others">Others</option>
-                    </select> 
-            </label>
+                <div class="flexLabels">
+                    <p>I want to learn</p>
+                    <label for="languageLearn">
+                            <select name="languageLearn"> 
+                                <option value="English">English</option>
+                                <option value="Spanish">Spanish</option>
+                                <option value="Catalan">Catalan</option>
+                                <option value="French">French</option>
+                                <option value="Italian">Italian</option>
+                                <option value="German">German</option>
+                                <option value="Chinese">Chinese</option>
+                                <option value="Japanese">Japanese</option>
+                                <option value="Hindi">Hindi</option>
+                                <option value="Russian">Russian</option>
+                                <option value="Dutch">Dutch</option>
+                                <option value="Swedish">Swedish</option>
+                                <option value="Portuguese">Portuguese</option>
+                                <option value="Korean">Korean</option>
+                                <option value="Polish">Polish</option>
+                                <option value="Greek">Greek</option>
+                                <option value="Others">Others</option>
+                            </select> 
+                    </label>
+                </div>
 
-            <label>
-            <select name="meetingPreference"> 
-                <option value="online">online</option>
-                <option value="in-person">in-person</option>
-                <option value="both">Both</option>
-            </select>
-            </label>
+                <label for="meetingPreference">
+                <select name="meetingPreference"> 
+                    <option value="online">online</option>
+                    <option value="in-person">in-person</option>
+                    <option value="both">Both</option>
+                </select>
+                </label>
+            </div>
+            <div class="flexFormInputs">
+                <button type="submit">Find Profiles</button>
+            </div>
 
-            <button type="submit">Find Profiles</button>
         </form>
+
     </div>
 </section>
 
-<section>
+<section class="flexAleix">
     <h2>Brwose all profiles</h2>
 
     {{#each profiles}}
