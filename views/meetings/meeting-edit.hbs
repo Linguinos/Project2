@@ -7,24 +7,24 @@
 <form action="/meetings/{{_id}}/edit" method="POST">
 
     <div class="element">
-    <label for="name">Name: 
+      <label for="name">Name: 
         <input type="text" name="name" id="" value="{{name}}">
-    </label>
+      </label>
     </div>
 
     <div class="element">
-    <label for="typeOfMeeting"> Type of event:
+      <label for="typeOfMeeting"> Type of event:
         <select name="typeOfMeeting"> 
             <option value="1-on-1">1-on-1</option>
             <option value="Study Group">Study Group</option>
             <option value="Beers and fun">Beers and Fun</option>
             <option value="Book Club">Book Club</option>
         </select>
-    </label>
+      </label>
     </div>
 
    <div class="element">
-    <label for="language"> Language:
+     <label for="language"> Language:
         <select name="language"> 
             <option value="English">English</option>
             <option value="Spanish">Spanish</option>
@@ -44,43 +44,43 @@
             <option value="Greek">Greek</option>
             <option value="Others">Others</option>
         </select>
-    </label>
+     </label>
     </div>
 
     <div class="element">
-    <label for="schedule">Day: 
+      <label for="schedule">Day: 
         <input type="date" name="schedule" id="" value="{{schedule}}">
-    </label>
+      </label>
     </div>
 
     <div class="element">
-    <label for="time">Time: 
+      <label for="time">Time: 
         <input type="time" name="time" id="" value="{{time}}">
-    </label>
+      </label>
     </div>
 
     <div class="element">
-    <label for="city">City: 
+      <label for="city">City: 
         <input type="text" name="city" id="" value="{{city}}">
-    </label>
+      </label>
     </div>
 
     <div class="element">
-    <label for="description">Description: 
+      <label for="description">Description: 
         <input type="text" name="description" id=""value="{{description}}">
-    </label>
+      </label>
     </div>
     
 <hr>
-<div class="submit-btn">
+  <div class="submit-btn">
     <button type="submit">Save changes</button>
-</form>
-</div>
+    </form>
+   </div>
 
 <div class="submit-btn">
- <form action="/meetings/{{_id}}/delete" method="POST">
- <button type="submit"> Delete meeting</button>
- </form>
+  <form action="/meetings/{{_id}}/delete" method="POST">
+     <button type="submit"> Delete meeting</button>
+  </form>
 </div>
 
 </div>
