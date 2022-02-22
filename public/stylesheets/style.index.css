@@ -13,16 +13,16 @@ a {
   color: #00B7FF;
 }
 
-p,a {
+p,a, button {
   font-size: 1.6rem;
 }
 
 
 button {
   padding: 10px;
-  border-radius: 10px;
   background-color: #6ccff6;
   border: 0px;
+  border-radius: 10px;
   color: white;
 }
 
