@@ -1,10 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-size: 10px;
-  padding: 50px;
+  padding: 0px;
   font: 10px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+
 a {
   color: #00B7FF;
+}
+
+p,a {
+  font-size: 1.6rem;
 }
 
 button {
@@ -13,4 +23,56 @@ button {
   background-color: #6ccff6;
   border: 0px;
   color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background-color: #1f2421;
+  padding: 5px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+nav h1 {
+  color: white;
+  font-size: 1.6rem;
+}
+
+.logo {
+  height: 40px;
+}
+
+.logoTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1%;
+}
+
+.logoTitle * {
+  padding: 0px 5px;
+}
+
+.logout {
+  padding: 5px 15px;
+  border-radius: 10px;
+  background-color: white;
+  border: 0px;
+  color: #1f2421;
+}
+
+.linkDiv {
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1%;
 }
