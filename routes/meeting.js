@@ -32,7 +32,7 @@ router.route('/create')
     res.render('meetings/meeting-create')
 })
 .post(isLoggedIn, (req, res) => {
-    const {name, typeOfMeeting, language, schedule, time, city} = req.body;
+    const {name, typeOfMeeting, language, schedule, time, city, description} = req.body;
     const host = req.session.userId;
 
     console.log("11111111111111111111111111111", host);
@@ -41,7 +41,7 @@ router.route('/create')
     .then((user) => {
         const host = user._id;
 
-        Meeting.create({name, host, typeOfMeeting, language, schedule, time, city})
+        Meeting.create({name, host, typeOfMeeting, language, schedule, time, city, description})
         .then((meeting)=>{
             console.log("2222222222222222222", meeting);
 
@@ -78,17 +78,21 @@ router.post("/:id/delete", (req, res, next) => {
 
 router.route("/:id/edit")
 .get(isLoggedIn, (req, res) => {
-  const id = req.params.id; 
-  console.log(id)
-  Meeting.findById(id)
-    .then((meeting) => res.render("meetings/meeting-edit", meeting))
-    .catch(error => console.log(error));
+    const id = req.params.id;
+
+    Meeting.findById(id)
+        .populate('host')
+        .then((meeting) => {
+            if(meeting.host._id != req.session.userId) res.redirect(`/meetings/${meeting._id}`);
+            else res.render("meetings/meeting-edit", meeting);
+        })
+        .catch(error => console.log(error));
 })
 .post(isLoggedIn, (req, res)=>{
-  const {name, typeOfMeeting, language, schedule, time, city} = req.body
+  const {name, typeOfMeeting, language, schedule, time, city, description} = req.body
   const id = req.params.id;
 
-  Meeting.findByIdAndUpdate(id, {name, typeOfMeeting, language, schedule, time, city})
+  Meeting.findByIdAndUpdate(id, {name, typeOfMeeting, language, schedule, time, city, description})
     .then((meeting)=>{
         res.redirect(`/meetings/${meeting._id}`);
     })
