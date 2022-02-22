@@ -1,5 +1,7 @@
+
+/* FORMS */
 .login-container{
-    padding-top: 5%;
+    padding-top: 3rem;
 }
 
 .form{
@@ -37,5 +39,70 @@
 
 .element{
     margin: 10px
+}
+
+
+/* PROFILE */
+.profile-details{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.profile-detailsFlex{
+    background-color: #ffe2fe;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.profile-img{
+    width:200px;
+    height:200px;
+    border-radius: 100px;
+    object-fit: cover;
+    border: 3px solid #E84855;
+    display: flex;
+    justify-content: center;
+}
+
+#img-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffcb47;
+}
+
+#edit-profilebtn{
+    display: flex;
+    justify-content: right;
+}
+
+.profile-events{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.events-profileFlex{
+    background-color: #6ccff6; 
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-header{
+    background-color: #ffcb47;
+    justify-content: center;
 }
 
