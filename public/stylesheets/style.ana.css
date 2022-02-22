@@ -1,0 +1,33 @@
+.form{
+    background-color: #6ccff6;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.form-details{
+    background-color: #6ccff6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 50vh;
+}
+
+#submit-btn{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#home-btn{
+    display: flex;
+    flex-direction: column;
+}
+
+.element{
+    margin: 10px
+}
