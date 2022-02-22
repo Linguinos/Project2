@@ -1,34 +1,48 @@
-<h2>Profile</h2>
+<div class="login-container">
 
-Hello {{this.username}}
-<br>
-this is your configuration:
+<section class="profile-header">
+  <a id="edit-profilebtn" href="/user/edit"> <button type="submit">Edit your profile</button>
+  </a>
 
-<ul>
-    <li> Username:   {{username}} </li>
-    <li> email:   {{email}} </li>
-    <li> Bio:   {{description}} </li>
-    <li> City:   {{city}} </li>
-    <li> Language you speak:   {{languageSpeak}} </li>
-    <li> Language you want to learn:   {{languageLearn}} </li>
-    <li> Prefered schedule:   {{schedule}} </li>
-    <li> I prefer to meet:   {{meetingPreference}} </li>
-    <li> Your Picture: <img src="{{imgUrl}}"alt="cat"> </li>    
-</ul>
+  <div id="img-container">
+     <img class="profile-img" src="{{imgUrl}}"alt="default">    
+     
+       <h2 class="element"> Username: {{username}} </h2>
+       <h2 class="element"> City: {{city}} </h2>
+       <h2 class="element"> email:   {{email}} </h2>
+   </div>
+</section>
 
-<h3>{{username}}'s events:</h3>
-{{#each meetings}}
+<section class="profile-detailsFlex">
+
+   <div class="profile-details">
+    <h2 class="element"> Bio: "{{description}}" </h2>
+    <h2 class="element"> Language you speak:   {{languageSpeak}} </h2>
+    <h2 class="element"> Language you want to learn:   {{languageLearn}} </h2>
+    <h2 class="element"> Prefered schedule:   {{schedule}} </h2>
+    <h2 class="element"> I prefer to meet:   {{meetingPreference}} </h2> 
+   </div>
+</section>
+
+<section class="events-profileFlex">
+  <h3>{{username}}'s events:</h3>
+  {{#each meetings}}
+   <div class="profile-events">
     <a href="/meetings/{{_id}}"><h4>{{name}}</h4></a>
     <p>{{language}}</p>
+   </div>
     <hr>
-{{/each}}
+  {{/each}}
 
-<h3>{{username}} has joined the following events:</h3>
 
-{{#each meetingsAttended}}
-    <a href="/meetings/{{_id}}"><h4>{{name}}</h4></a>
-{{/each}}
-
+  <h3>{{username}} has joined the following events: </h3>
+        {{#each meetingsAttended}}
+      <div class="profile-events">
+            <a href="/meetings/{{_id}}"><h4>{{name}}</h4></a>
+            <p>{{language}}</p>
+       {{/each}}
+     </div>
+</section>
  <hr>
 
-<a href="/user/edit"> <button type="submit">Edit your profile</button></a>
+</div>
