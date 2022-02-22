@@ -1,0 +1,48 @@
+.index-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.index-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+}
+
+.index-block > h2 {
+    width: 80%;
+    text-align: center;
+}
+
+.index-block #login {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+#text-aboutUs {
+    text-align: center;
+    width: 60%;
+    margin: 10px;
+}
+
+#index-button {
+    margin: 30px;
+}
+
+
+
+
+
+
+
+
+
+
