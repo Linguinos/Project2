@@ -66,15 +66,14 @@ nav h1 {
   padding: 5px 15px;
   border-radius: 10px;
   background-color: white;
-  border: 0px;
   color: #1f2421;
 }
 
 .linkDiv {
   display: flex;
-  width: 20%;
+  width: 350px;
   justify-content: space-between;
   align-items: center;
-  padding-right: 1%;
+  padding-right: 10px;
 }
 

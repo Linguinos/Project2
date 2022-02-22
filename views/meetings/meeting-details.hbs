@@ -1,19 +1,37 @@
-<h2>Event details:</h2>
+<section class="flexAleix" id="eventDetailsTitle">
+    <h2>{{name}}</h2>
+    <h3>{{city}}</h3>
+    <h3>{{time}}  |  {{schedule}}</h3>
+</section>
 
+
+<section class="flexAleix" id="eventDetailsDescription">
+    <h2>Language: {{language}}</h2>
+    <p>{{description}}</p>
+</section>
+
+
+<section class="flexAleix" id="eventDetailsParticipants">
+    <div>
+        <form action="/meetings/{{_id}}/join" method="POST">
+            <button type="submit">Join this event</button>
+        </form>
+    </div>
+
+    <div class="attendees">
+        <p>Atendees: </p>
+        <div class="host">
+            <p>Hosted by: {{host.username}}</p>
+            <p>Contact: {{host.email}}</p>
+        </div>
+        <div class="attendeesNames">
+            {{#each attendees}}
+                <a href="/user/{{_id}}"><p>{{username}}</p></a>
+            {{/each}}
+        </div>
+    </div>
+
+</section>
     
-    <p>Name of the Event: {{name}}</p>
-    <p>The host: {{host.username}}</p>
-    <p>Contact email: {{host.email}}</p>
-    <p>Language: {{language}}</p>
-    <p>Schedule: {{schedule}} | {{time}}</p>
-    <p>Description: {{description}}</p>
-    <p>Atendees: </p>
-    {{#each attendees}}
-        <a href="/user/{{_id}}"><p>{{username}}</p></a>
-    {{/each}}
-
-    <form action="/meetings/{{_id}}/join" method="POST">
-        <button type="submit">Join this event</button>
-    </form>
 
     <a href="/meetings/{{_id}}/edit"> <button type="submit">Edit Event</button> </a>

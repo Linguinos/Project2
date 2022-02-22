@@ -72,22 +72,24 @@
 </section>
 
 <section class="flexAleix" id="resultsListSection">
-    <h2>Brwose profiles</h2>
+    <h2>Browse profiles</h2>
 
-    <div>
+    <div class="profilesList">
         {{#each profiles}}
 
             <div class="flexProfile">
-                <div>
-                    <h3>{{username}}</h3>
+                <h3>{{username}}</h3>
+                <div class="flexProfile2">
+                    <div class="imgContainer">
+                        <img src="{{imgUrl}}" alt="" class="profileImgResults">
+                    </div>
                     <div>
-                        <div class="imgContainer">
-                            <img src="{{imgUrl}}" alt="" class="profileImgResults">
-                        </div>
-
                         <p>{{city}}</p>
-                        <p>{{description}}</p>
-                        <a href="/user/{{_id}}">See more details</a>
+                        <p>I speak:</p>
+                        <p>{{languageSpeak}}</p>
+                        <p>I want to learn:</p>
+                        <p>{{languageSpeak}}</p>
+                        <a href="/user/{{_id}}">See more</a>
                     </div>
                 </div>
             </div>
