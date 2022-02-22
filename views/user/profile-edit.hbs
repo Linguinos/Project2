@@ -1,21 +1,33 @@
+<div class="login-container">
+
+<section class="form">
 <h2>Edit profile</h2>
 
+<div class="form-details">
 <form action="/user/edit" method="POST" enctype="multipart/form-data">
+  
+  <div class="element">
   <label for="username"> Username:
     <input type="text" name="username" value="{{username}}"/>
   </label>
+  </div>
   <br>
 
+  <div class="element">
   <label for="description"> Bio:
     <input type="text" name="description" value="{{description}}"/> 
   </label>
+  </div>
   <br>
   
+  <div class="element">
   <label for="city"> City:
     <input type="text" name="city" value="{{city}}"/> 
   </label>
+  </div>
   <br>
 
+  <div class="element">
   <label for="languageSpeak"> Language I speak:
     <select name="languageSpeak"> 
             <option value="English">English</option>
@@ -37,8 +49,10 @@
             <option value="Others">Others</option>
         </select>
   </label>
+  </div>
   <br>
-
+  
+  <div class="element">
   <label for="languageLearn"> Language I want to learn:
         <select name="languageLearn"> 
             <option value="English">English</option>
@@ -60,13 +74,17 @@
             <option value="Others">Others</option>
         </select> 
   </label>
+  </div>
   <br>
 
+ <div class="element">
  <label> Preferred schedule:
     <input type="text" name="schedule" value="{{schedule}}"/> 
   </label>
+  </div>
    <br>
 
+<div class="element">
  <label> I prefer to meet:
    <select name="meetingPreference"> 
      <option value="online">online</option>
@@ -74,14 +92,22 @@
      <option value="both">Both</option>
    </select>
   </label>
+  </div>
 
    <br>
 
+  <div class="element">
   <label> Profile picture:
     <input type="file" name="imgUrl">
   </label>
+  </div>
   <br>
 
+<div class="submit-btn">
   <button type="submit"> Update profile </button>
 </form>
+</div>
 
+</div>
+</section>
+</div>
