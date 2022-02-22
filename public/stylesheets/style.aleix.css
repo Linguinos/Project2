@@ -48,6 +48,12 @@
     width: 500px;
 }
 
+.profilesList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .flexProfile {
     display: flex;
     flex-direction: column;
@@ -56,17 +62,27 @@
     background-color: white;
     border-radius: 10px;
     padding: 20px;
+    margin: 10px;
+    width: 650px;
+}
+
+.flexProfile2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.flexProfile2>*{
     margin: 20px;
 }
 
-.imgContainer{
-    width: 100px;
-    height: 100px;
-}
-
 .profileImgResults {
-    width: auto;
-    max-height: 100%;
+   width:200px;
+   height:200px;
+   border-radius:100px;
+   border: 0px;
+   object-fit: cover;
 }
 
 .width80 {
@@ -106,4 +122,56 @@
 
 #resultsListSection {
     background-color: #ffe2fe;
+}
+
+#resultsListSection>h2{
+    margin: 30px;
+}
+
+/* Event details */
+
+#eventDetailsTitle {
+    background-color: #6ccff6;
+    height: 200px;
+}
+
+#eventDetailsTitle>h2 {
+    margin-top: 40px;
+}
+
+#eventDetailsDescription {
+    background-color: #ffcb47;
+    height: 200px;
+}
+
+#eventDetailsParticipants {
+    background-color: #1f2421;
+}
+
+#eventDetailsParticipants>*{
+    margin: 20px;
+}
+
+.host {
+    background-color: #ffcb47;
+    width: 100%;
+}
+
+.attendees {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 0px;
+    width: 80%;
+}
+
+.attendees>div>*{
+    padding-left: 50px;
+}
+
+.attendeesNames {
+    width: 100%;
 }
