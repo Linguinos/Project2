@@ -1,4 +1,5 @@
 .index-container {
+    padding-top: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,13 +10,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90%;
-    padding: 10px;
-    margin: 10px;
+    width: 100%;
+    padding: 20px;
 }
 
 .index-block > h2 {
-    width: 80%;
+    font-size: 2rem;
+    width: 60%;
     text-align: center;
 }
 
@@ -23,14 +24,12 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
-    margin: 10px;
+    padding: 20px;
 }
 
 #text-aboutUs {
     text-align: center;
     width: 60%;
-    margin: 10px;
 }
 
 #index-singUpButton {
@@ -45,8 +44,45 @@
 }
 
 
+.feed-container {
+    border: 1px solid orange;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
 
+.find-block {
+    border: 1px solid pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
 
+.accessProfile-block {
+    border: 1px solid pink;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.accessProfile-block > a {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#accessProfile-img {
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
 
 
 
