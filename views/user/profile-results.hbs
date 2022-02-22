@@ -1,103 +1,73 @@
-<h2>Profiles List</h2>
 
-<div>
-    <form action="">
-        <button type="submit">Search results</button>
-    </form>
-</div>
+<section>
+    <div>
+        <form action="/user/results" method="POST">
+            <label for="languageSpeak"> I want to learn:
+                <select name="languageSpeak"> 
+                        <option value="English">English</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="Catalan">Catalan</option>
+                        <option value="French">French</option>
+                        <option value="Italian">Italian</option>
+                        <option value="German">German</option>
+                        <option value="Chinese">Chinese</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Russian">Russian</option>
+                        <option value="Dutch">Dutch</option>
+                        <option value="Swedish">Swedish</option>
+                        <option value="Portuguese">Portuguese</option>
+                        <option value="Korean">Korean</option>
+                        <option value="Polish">Polish</option>
+                        <option value="Greek">Greek</option>
+                        <option value="Others">Others</option>
+                    </select>
+            </label>
+            <br>
 
-{{#each profiles}}
+            <label for="languageLearn"> I can teach:
+                    <select name="languageLearn"> 
+                        <option value="English">English</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="Catalan">Catalan</option>
+                        <option value="French">French</option>
+                        <option value="Italian">Italian</option>
+                        <option value="German">German</option>
+                        <option value="Chinese">Chinese</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Russian">Russian</option>
+                        <option value="Dutch">Dutch</option>
+                        <option value="Swedish">Swedish</option>
+                        <option value="Portuguese">Portuguese</option>
+                        <option value="Korean">Korean</option>
+                        <option value="Polish">Polish</option>
+                        <option value="Greek">Greek</option>
+                        <option value="Others">Others</option>
+                    </select> 
+            </label>
 
-<h3>{{username}}</h3>
-<p>{{city}}</p>
-<p>{{description}}</p>
+            <label>
+            <select name="meetingPreference"> 
+                <option value="online">online</option>
+                <option value="in-person">in-person</option>
+                <option value="both">Both</option>
+            </select>
+            </label>
 
-<a href="/user/{{_id}}">See more details</a>
+            <button type="submit">Find Profiles</button>
+        </form>
+    </div>
+</section>
 
-{{/each}}
+<section>
+    <h2>Brwose all profiles</h2>
 
-<form action="/user/results" method="POST">
-<label for="languageSpeak"> I want to learn:
-    <select name="languageSpeak"> 
-            <option value="English">English</option>
-            <option value="Spanish">Spanish</option>
-            <option value="Catalan">Catalan</option>
-            <option value="French">French</option>
-            <option value="Italian">Italian</option>
-            <option value="German">German</option>
-            <option value="Chinese">Chinese</option>
-            <option value="Japanese">Japanese</option>
-            <option value="Hindi">Hindi</option>
-            <option value="Russian">Russian</option>
-            <option value="Dutch">Dutch</option>
-            <option value="Swedish">Swedish</option>
-            <option value="Portuguese">Portuguese</option>
-            <option value="Korean">Korean</option>
-            <option value="Polish">Polish</option>
-            <option value="Greek">Greek</option>
-            <option value="Others">Others</option>
-        </select>
-  </label>
-  <br>
+    {{#each profiles}}
+        <h3>{{username}}</h3>
+        <p>{{city}}</p>
+        <p>{{description}}</p>
 
-  <label for="languageLearn"> I can teach:
-        <select name="languageLearn"> 
-            <option value="English">English</option>
-            <option value="Spanish">Spanish</option>
-            <option value="Catalan">Catalan</option>
-            <option value="French">French</option>
-            <option value="Italian">Italian</option>
-            <option value="German">German</option>
-            <option value="Chinese">Chinese</option>
-            <option value="Japanese">Japanese</option>
-            <option value="Hindi">Hindi</option>
-            <option value="Russian">Russian</option>
-            <option value="Dutch">Dutch</option>
-            <option value="Swedish">Swedish</option>
-            <option value="Portuguese">Portuguese</option>
-            <option value="Korean">Korean</option>
-            <option value="Polish">Polish</option>
-            <option value="Greek">Greek</option>
-            <option value="Others">Others</option>
-        </select> 
-  </label>
-
-   <label>
-   <select name="meetingPreference"> 
-     <option value="online">online</option>
-     <option value="in-person">in-person</option>
-     <option value="both">Both</option>
-   </select>
-  </label>
-
-  <button type="submit">Find Profiles</button>
-</form>
-
-<!--MEETINGS-->
-
-<form action="/meetings" method="POST">
-<label for="language"> Meeting main Language:
-    <select name="language"> 
-            <option value="English">English</option>
-            <option value="Spanish">Spanish</option>
-            <option value="Catalan">Catalan</option>
-            <option value="French">French</option>
-            <option value="Italian">Italian</option>
-            <option value="German">German</option>
-            <option value="Chinese">Chinese</option>
-            <option value="Japanese">Japanese</option>
-            <option value="Hindi">Hindi</option>
-            <option value="Russian">Russian</option>
-            <option value="Dutch">Dutch</option>
-            <option value="Swedish">Swedish</option>
-            <option value="Portuguese">Portuguese</option>
-            <option value="Korean">Korean</option>
-            <option value="Polish">Polish</option>
-            <option value="Greek">Greek</option>
-            <option value="Others">Others</option>
-        </select>
-  </label>
-  <br>
-
-  <button type="submit">Find Events</button>
-</form>
+        <a href="/user/{{_id}}">See more details</a>
+    {{/each}}
+</section>
