@@ -13,6 +13,11 @@ const MongoStore = require('connect-mongo');
 
 const hbs = require('hbs')
 
+hbs.registerHelper("equals", function (firstId, secondId) {
+  if(firstId.toString() === secondId.toString()){return true}
+  else return false
+});
+
 // Middleware configuration
 module.exports = (app) => {
   // In development environment the app logs
@@ -41,6 +46,9 @@ module.exports = (app) => {
       secret: process.env.SESSION_SECRET || "super hyper secret key",
       resave: false,
       saveUninitialized: false,
+      cookie:{
+        maxAge: 24*60*60*1000
+      },
       store: MongoStore.create({
         mongoUrl: process.env.MONGODB_URI,
       }),
