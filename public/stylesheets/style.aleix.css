@@ -203,8 +203,8 @@ h1 {
     font-size: 1.3rem;
 }
 
-.languagesProfile>div>h3 {
-    font-weight: 600;
+.languagesProfile h3 {
+    font-weight: 400;
     font-size: 1.3rem;
 }
 
