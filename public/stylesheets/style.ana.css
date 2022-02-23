@@ -46,25 +46,28 @@
 .profile-details{
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 30px;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     align-items: center;
     justify-content: center;
     margin: 10px;
+    text-align: center;
+    width: 90%;
 }
 
-.profile-detailsFlex{
+.profile-detailsFlex {
+    display: flex;
     background-color: #ffe2fe;
     align-items: center;
     justify-content: center;
-    padding: 5px;
+    padding: 20px;
 }
 
 .languagesProfile {
     display: flex;
     justify-content: space-evenly;
-    width: 60%;
+    width: 50%;
 }
 
 .languagesProfile>div {
@@ -90,6 +93,15 @@
     align-items: center;
     justify-content: center;
     background-color: #ffcb47;
+}
+
+#img-container>.meetingIcon {
+    padding-top: 25px;
+}
+
+.contactEmail {
+    font-size: 1.2rem;
+    padding-top: 10px;
 }
 
 #editBtnDiv {
@@ -128,6 +140,7 @@
 .profile-header{
     background-color: #ffcb47;
     justify-content: center;
+    padding-bottom: 20px;
 }
 
 #profileEvents {
