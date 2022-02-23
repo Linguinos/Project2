@@ -1,19 +1,19 @@
 <section class="flexAleix" id="eventDetailsTitle">
-    <h2>{{name}}</h2>
-    <h3>{{city}}</h3>
-    <h3>{{time}}  |  {{schedule}}</h3>
+    <h2>{{meeting.name}}</h2>
+    <h3>{{meeting.city}}</h3>
+    <h3>{{meeting.time}}  |  {{meeting.schedule}}</h3>
 </section>
 
 
 <section class="flexAleix" id="eventDetailsDescription">
-    <h2>Language: {{language}}</h2>
-    <p>{{description}}</p>
+    <h2>Language: {{meeting.language}}</h2>
+    <p>{{meeting.description}}</p>
 </section>
 
 
 <section class="flexAleix" id="eventDetailsParticipants">
     <div>
-        <form action="/meetings/{{_id}}/join" method="POST">
+        <form action="/meetings/{{meeting._id}}/join" method="POST">
             <button type="submit">Join this event</button>
         </form>
     </div>
@@ -21,11 +21,11 @@
     <div class="attendees">
         <p>Atendees: </p>
         <div class="host">
-            <p>Hosted by: {{host.username}}</p>
-            <p>Contact: {{host.email}}</p>
+            <p>Hosted by: {{meeting.host.username}}</p>
+            <p>Contact: {{meeting.host.email}}</p>
         </div>
         <div class="attendeesNames">
-            {{#each attendees}}
+            {{#each meeting.attendees}}
                 <a href="/user/{{_id}}"><p>{{username}}</p></a>
             {{/each}}
         </div>
@@ -33,5 +33,6 @@
 
 </section>
     
-
-    <a href="/meetings/{{_id}}/edit"> <button type="submit">Edit Event</button> </a>
+{{#if (equals meeting.host._id userId)}}
+    <a href="/meetings/{{meeting._id}}/edit"> <button type="submit">Edit Event</button> </a>
+{{/if}}
