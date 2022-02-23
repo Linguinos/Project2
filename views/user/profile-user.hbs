@@ -1,48 +1,105 @@
 <div class="login-container">
 
 <section class="profile-header">
-  <a id="edit-profilebtn" href="/user/edit"> <button type="submit">Edit your profile</button>
-  </a>
+  <div id="editBtnDiv">
+    <a id="edit-profilebtn" href="/user/edit">Edit your profile</a>
+  </div>
 
   <div id="img-container">
-     <img class="profile-img" src="{{imgUrl}}"alt="default">    
-     
-       <h2 class="element"> Username: {{username}} </h2>
-       <h2 class="element"> City: {{city}} </h2>
-       <h2 class="element"> email:   {{email}} </h2>
-   </div>
+    <h2 class="element">{{username}}</h2>
+    <img class="profile-img" src="{{imgUrl}}"alt="default">     
+    <h2 class="element"> City: {{city}} </h2>
+    <h2 class="element"> Contact: {{email}} </h2>
+  </div>
+
 </section>
 
 <section class="profile-detailsFlex">
 
-   <div class="profile-details">
-    <h2 class="element"> Bio: "{{description}}" </h2>
-    <h2 class="element"> Language you speak:   {{languageSpeak}} </h2>
-    <h2 class="element"> Language you want to learn:   {{languageLearn}} </h2>
-    <h2 class="element"> Prefered schedule:   {{schedule}} </h2>
-    <h2 class="element"> I prefer to meet:   {{meetingPreference}} </h2> 
-   </div>
+  <div class="profile-details">
+    <h1>ABOUT ME</h1>
+    {{#if description}}
+      <h2 class="element"><em>"{{description}}"</em></h2>
+    {{else}}
+      <h2 class="element"><em>{{username}} still has no bio. Suspicious!</em></h2>
+    {{/if}}
+    <div class="languagesProfile">
+      <div>
+        <h2 class="element"> I can speak</h2>
+        <h2 class="element">{{languageSpeak}}</h2>
+      </div>
+      <div>
+        <h2 class="element"> I want to learn</h2>
+        <h2 class="element">{{languageLearn}}</h2>
+      </div>
+    </div>
+      <div>
+
+      </div>
+      <h2 class="element"> Prefered schedule:   {{schedule}} </h2>
+      <h2 class="element"> I prefer to meet:   {{meetingPreference}} </h2> 
+  </div>
+
 </section>
 
-<section class="events-profileFlex">
-  <h3>{{username}}'s events:</h3>
-  {{#each meetings}}
-   <div class="profile-events">
-    <a href="/meetings/{{_id}}"><h4>{{name}}</h4></a>
-    <p>{{language}}</p>
-   </div>
-    <hr>
-  {{/each}}
+<section class="flexAleix" id="profileEvents">
+    <h2>Hosted events</h2>
 
+    <div class="width80">
+        {{#if meetings}}
+            {{#each meetings}}
+                <div class="flexMeeting">
+                    <div>
+                        <h3>{{name}}</h3>
+                        
+                        <div class="meetingIcon">
+                            <img src="/images/pin-21501.png" alt="" class="pinIcon">
+                            <p>{{city}}</p>
+                        </div>
 
-  <h3>{{username}} has joined the following events: </h3>
-        {{#each meetingsAttended}}
-      <div class="profile-events">
-            <a href="/meetings/{{_id}}"><h4>{{name}}</h4></a>
-            <p>{{language}}</p>
-       {{/each}}
-     </div>
+                        <p>{{language}}</p>
+
+                    </div>
+                    <div>
+                        <a href="/meetings/{{_id}}">See more details</a>
+                    </div>
+                </div>
+            {{/each}}
+        {{else}}
+            <div class="flexMeeting">
+                <h3>{{username}} hasn't hosted any events yet.</h3>
+            </div>
+        {{/if}}
+    </div>
+
+    <h2>Joined events</h2>
+
+    <div class="width80">
+        {{#if meetingsAttended}}
+            {{#each meetingsAttended}}
+                <div class="flexMeeting">
+                    <div>
+                        <h3>{{name}}</h3>
+                        
+                        <div class="meetingIcon">
+                            <img src="/images/pin-21501.png" alt="" class="pinIcon">
+                            <p>{{city}}</p>
+                        </div>
+
+                        <p>{{language}}</p>
+
+                    </div>
+                    <div>
+                        <a href="/meetings/{{_id}}">See more details</a>
+                    </div>
+                </div>
+            {{/each}}
+        {{else}}
+            <div class="flexMeeting">
+                <h3>{{username}} hasn't joined any events yet.</h3>
+            </div>
+        {{/if}}
+    </div>
 </section>
- <hr>
 
 </div>

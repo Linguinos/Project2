@@ -1,33 +1,96 @@
+<div class="login-container">
 
-<h2> {{username}}'s Profile</h2>
+<section class="profile-header">
+  <div id="img-container">
+    <h1 class="element">{{username}}</h1>
+    <img class="profile-img" src="{{imgUrl}}"alt="default">     
+    <h2 class="element"> City: {{city}} </h2>
+    <h2 class="element"> Contact: {{email}} </h2>
+  </div>
+</section>
 
-<br>
+<section class="profile-detailsFlex">
 
-<ul>
-    <li> Username:   {{username}} </li>
-    <li> email:   {{email}} </li>
-    <li> Bio:   {{description}} </li>
-    <li> City:   {{city}} </li>
-    <li> Language you speak:   {{languageSpeak}} </li>
-    <li> Language you want to learn:   {{languageLearn}} </li>
-    <li> Prefered schedule:   {{schedule}} </li>
-    <li> I prefer to meet:   {{meetingPreference}} </li>
-    <li> Your Picture: <img src="{{imgUrl}}"alt="cat"> </li>    
-</ul>
+  <div class="profile-details">
+    <h1>ABOUT ME</h1>
+    <h2 class="element"><em>"{{description}}"</em></h2>
+    <div class="languagesProfile">
+      <div>
+        <h2 class="element"> I can speak</h2>
+        <h2 class="element">{{languageSpeak}}</h2>
+      </div>
+      <div>
+        <h2 class="element"> I want to learn</h2>
+        <h2 class="element">{{languageLearn}}</h2>
+      </div>
+    </div>
+      <div>
 
-<h3>{{username}}'s events:</h3>
+      </div>
+      <h2 class="element"> Prefered schedule:   {{schedule}} </h2>
+      <h2 class="element"> I prefer to meet:   {{meetingPreference}} </h2> 
+  </div>
 
-{{#each meetings}}
-    <a href="/meetings/{{_id}}"><h4>{{name}}</h4></a>
-    <p>{{language}}</p>
-    <hr>
-{{/each}}
+</section>
 
+<section class="flexAleix" id="profileEvents">
+    <h1>Hosted events</h1>
 
-<h3>{{username}} has joined the following events:</h3>
+    <div class="width80">
+        {{#if meetings}}
+            {{#each meetings}}
+                <div class="flexMeeting">
+                    <div>
+                        <h3>{{name}}</h3>
+                        
+                        <div class="meetingIcon">
+                            <img src="/images/pin-21501.png" alt="" class="pinIcon">
+                            <p>{{city}}</p>
+                        </div>
 
-{{#each meetingsAttended}}
-    <a href="/meetings/{{_id}}"><h4>{{name}}</h4></a>
-{{/each}}
+                        <p>{{language}}</p>
 
- <hr>
+                    </div>
+                    <div>
+                        <a href="/meetings/{{_id}}">See more details</a>
+                    </div>
+                </div>
+            {{/each}}
+        {{else}}
+            <div class="flexMeeting">
+                <h3>{{username}} hasn't hosted any events yet.</h3>
+            </div>
+        {{/if}}
+    </div>
+
+    <h1>Joined events</h1>
+
+    <div class="width80">
+        {{#if meetingsAttended}}
+            {{#each meetingsAttended}}
+                <div class="flexMeeting">
+                    <div>
+                        <h3>{{name}}</h3>
+                        
+                        <div class="meetingIcon">
+                            <img src="/images/pin-21501.png" alt="" class="pinIcon">
+                            <p>{{city}}</p>
+                        </div>
+
+                        <p>{{language}}</p>
+
+                    </div>
+                    <div>
+                        <a href="/meetings/{{_id}}">See more details</a>
+                    </div>
+                </div>
+            {{/each}}
+        {{else}}
+            <div class="flexMeeting">
+                <h3>{{username}} hasn't joined any events yet.</h3>
+            </div>
+        {{/if}}
+    </div>
+</section>
+
+</div>
