@@ -14,33 +14,36 @@
 }
 
 #block1 {
-    padding: 8%;
+    padding-top: 10%;
     background-image:
-        linear-gradient(rgba(255, 203, 71, 0.6), rgba(6, 91, 124, 0.6)), 
+        linear-gradient(rgba(202, 197, 183, 0.6), rgba(6, 91, 124, 0.6)), 
         url('/images/people-2.jpg');
     background-position: center;
     background-size:cover;
-    height: 300px;
+    height: 650px;
 }
 
-#block1 > h2 {
-    font-size: 2rem;
-    color: white   
+#block1 > h1 {
+    text-align: center;
+    width: 80%;
+    font-size: 2.9rem;
+    color:  #ffcb47; 
+    padding: 30px;
 }
 
-#block2 > h2 {
-    padding:10px 0 10px 0;
+#block1 p {
+    font-size: 1.9rem;
+}
+
+#block2 > h1 {
+    padding:20px 0 20px 0;
+    width: 60%;
+    text-align: center;
 }
 
 #block2 > p {
     padding: 10px 0 20px 0;
     font-size: 1.4rem;
-}
-
-.index-block > h2 {
-    font-size: 2rem;
-    width: 60%;
-    text-align: center;
 }
 
  #index-login {
@@ -54,20 +57,49 @@
 
 #text-aboutUs {
     text-align: center;
-    width: 60%;
+    font-size: 0.5px;
 }
 
-#index-singUpButton {
-    margin: 30px;
+
+#index-signUpButton {
+    padding: 50px;
+
+}
+
+#index-signUpButton button {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 1.5rem;
 }
 
 #index-logInButton {
-   padding-top: 30px;
+   padding: 50px;
 }
 
-#index-logInButton > button {
+#index-logInButton button {
     background-color: #ffcb47;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 1.5rem;
 }
+
+.block3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#block3-img {
+    width: 50%;
+    padding: 50px;
+}
+
+
 
 .feed-container {
     padding-top: 80px;
@@ -136,6 +168,8 @@
     margin-top: 5px;
     margin-bottom: 10px;
 }
+
+
 
 
 

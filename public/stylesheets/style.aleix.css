@@ -145,20 +145,34 @@
 
 #eventDetailsTitle {
     background-color: #6ccff6;
-    height: 700px;
+    height: 800px;
 }
 
-#eventDetailsTitle>h2 {
-    margin-top: 40px;
+#eventDetailsTitle>h1 {
+    font-size: 6rem;
+    margin-top: 150px;
+    text-align: center;
+    width: 90%;
 }
 
 #eventDetailsDescription {
     background-color: #ffcb47;
-    height: 200px;
+    height: fit-content;
+    padding: 10% 0%;
 }
+
+#eventDetailsDescription>h2 {
+    text-align: center;
+}
+
+#eventDetailsDescription>p {
+    width: 80%;
+    text-align: center;
+} 
 
 #eventDetailsParticipants {
     background-color: #1f2421;
+    height: 700px;
 }
 
 #eventDetailsParticipants>*{
@@ -191,10 +205,6 @@
 
 /* Profile fonts size */
 
-h1 {
-    font-size: 2.5rem;
-}
-
 .profile-header strong {
     font-weight: 600;
 }
@@ -204,9 +214,6 @@ h1 {
 }
 
 .profile-details>.bioProfile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-weight: 400; 
     /*font-size: 1.3rem;*/
 }
@@ -216,7 +223,7 @@ h1 {
 }
 
 .languagesProfile h3 {
-    font-weight: 400;
+    font-weight: 600;
     /*font-size: 1.3rem;*/
 }
 
@@ -228,7 +235,7 @@ h1 {
     margin-top: 10px;
 }
 
-.scheduleAndPreference>h2{
+.scheduleAndPreference>h3{
     margin-top: 40px;
     /*font-size: 1.3rem;*/
 }

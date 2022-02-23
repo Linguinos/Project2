@@ -26,33 +26,35 @@
         {{#if description}}
             <p class="bioProfile"><em>"{{description}}"</em></p>
         {{else}}
-            <h2 class="bioProfile"><em>{{username}} still has no bio. Suspicious!</em></h2>
+            <p class="bioProfile"><em>{{username}} still has no bio. Suspicious!</em></p>
         {{/if}}
 
 
         <div class="languagesProfile">
             <div>
+
                 <h2 class="element"> I speak</h2>
+
                 <ul>
                     {{#each languageSpeak}}
-                        <h3 class="element">{{this}}</h3>
+                        <p class="element">{{this}}</p>
                     {{/each}}
                 </ul>
             </div>
 
             <div>
-                <h2 class="element"> I want to learn</h2>
+                <h3 class="element"> I want to learn</h3>
                 <ul>
                     {{#each languageLearn}}
-                        <h3 class="element">{{this}}</h3>
+                        <p class="element">{{this}}</p>
                     {{/each}}
                 </ul>
             </div>
         </div>
 
         <div class="scheduleAndPreference">
-            {{#if schedule}}<h2 class="element"> Schedule: <span>{{schedule}}</span></h2>{{/if}}
-            <h2 class="element"> I prefer to meet: <span>{{meetingPreference}}</span></h2>
+            {{#if schedule}}<h3 class="element"> Schedule: <span>{{schedule}}</span></h3>{{/if}}
+            <h3 class="element"> I prefer to meet: <span>{{meetingPreference}}</span></h3>
         </div>
     </div>
 
@@ -85,7 +87,7 @@
             {{/each}}
         {{else}}
             <div class="flexMeeting">
-                <h3>{{username}} hasn't hosted any events yet.</h3>
+                <p>{{username}} hasn't hosted any events yet.</p>
             </div>
         {{/if}}
     </div>
