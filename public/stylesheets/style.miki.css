@@ -16,7 +16,7 @@
 #block1 {
     padding: 8%;
     background-image:
-        linear-gradient(rgba(207, 188, 13, 0.6), rgba(42, 14, 201, 0.6)), 
+        linear-gradient(rgba(255, 203, 71, 0.6), rgba(6, 91, 124, 0.6)), 
         url('/images/people-2.jpg');
     background-position: center;
     background-size:cover;
@@ -52,9 +52,6 @@
     color: white;
 }
 
-#index-login > p {
-}
-
 #text-aboutUs {
     text-align: center;
     width: 60%;
@@ -69,6 +66,7 @@
 }
 
 #index-logInButton > button {
+    background-color: #ffcb47;
 }
 
 .feed-container {
@@ -91,12 +89,12 @@
 
 .find-block > p {
     text-align: center;
-    width: 60%;
+    width: 90%;
     padding: 20px
 }
 
 .accessProfile-block {
-    background-color: #6ccff6;
+    background-color: white;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -113,11 +111,30 @@
 }
 
 .accessProfile-block > a {
-    padding: 20px;
+    padding-bottom: 5px;
 }
 
 .accessProfile-block > p {
-    padding: 20px;
+    padding-bottom: 10px;
+}
+
+#see-profiles{
+    background-color: #ffcb47;
+    width: 80%;
+    border-radius: 20px;
+    margin-bottom: 5px;
+}
+
+#see-events a button {
+    background-color: #d3c1d2;
+}
+
+#see-events{
+    background-color: #ffcb47;
+    width: 80%;
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 
