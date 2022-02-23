@@ -133,3 +133,11 @@
 #profileEvents {
     background-color: #6ccff6;
 }
+
+
+.edit-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1f2421;
+}
