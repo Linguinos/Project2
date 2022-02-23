@@ -145,20 +145,34 @@
 
 #eventDetailsTitle {
     background-color: #6ccff6;
-    height: 700px;
+    height: 800px;
 }
 
-#eventDetailsTitle>h2 {
-    margin-top: 40px;
+#eventDetailsTitle>h1 {
+    font-size: 6rem;
+    margin-top: 150px;
+    text-align: center;
+    width: 90%;
 }
 
 #eventDetailsDescription {
     background-color: #ffcb47;
-    height: 200px;
+    height: fit-content;
+    padding: 10% 0%;
 }
+
+#eventDetailsDescription>h2 {
+    text-align: center;
+}
+
+#eventDetailsDescription>p {
+    width: 80%;
+    text-align: center;
+} 
 
 #eventDetailsParticipants {
     background-color: #1f2421;
+    height: 700px;
 }
 
 #eventDetailsParticipants>*{

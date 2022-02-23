@@ -1,7 +1,12 @@
 <section class="flexAleix" id="eventDetailsTitle">
-    <h2>{{meeting.name}}</h2>
-    <h3>{{meeting.city}}</h3>
-    <h3>{{meeting.time}}  |  {{meeting.schedule}}</h3>
+    <h1>{{meeting.name}}</h1>
+    {{#if meeting.city}}
+        <div class="meetingIcon">
+            <img src="/images/pin-21501.png" alt="" class="pinIcon">
+            <h2>{{meeting.city}}</h2>
+        </div>
+    {{/if}}
+    <h2>{{meeting.time}}  |  {{meeting.schedule}}</h2>
 </section>
 
 
@@ -19,7 +24,7 @@
     </div>
 
     <div class="attendees">
-        <p>Atendees: </p>
+        <h1>Atendees: </h1>
         <div class="host">
             <p>Hosted by: {{meeting.host.username}}</p>
             <p>Contact: {{meeting.host.email}}</p>
