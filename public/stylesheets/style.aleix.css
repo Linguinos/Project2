@@ -117,13 +117,13 @@
 }
   
 #meetingCreateSection{
-    background-color: #ffe2fe;
-    padding: 20px;
+    background-color:  #ffcb47;
+    padding: 30px;
 }
 
 
 #createEvent-button{
-    font-size: 1.8em;
+    font-size: 1.5em;
     padding: 10px 25px 10px 25px
 }
 
@@ -139,7 +139,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
 }
 
 
