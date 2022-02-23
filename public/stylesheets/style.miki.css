@@ -38,18 +38,12 @@
     font-size: 1.9rem;
 }
 
-#block2 > h1 {
-    padding:20px 0 20px 0;
-    width: 60%;
-    text-align: center;
-}
-
 #text-aboutUs {
-    text-align: center;
     padding: 10px 0 20px 0;
-    width: 80%;
-    font-size: 0.9rem;
+    width: 70%;
+    font-size: 2em;
     text-align: justify;
+    text-align: center;
 }
 
 
@@ -89,6 +83,12 @@
     font-size: 1.5rem;
 }
 
+#block2 > h1 {
+    padding:20px 0 20px 0;
+    width: 60%;
+    text-align: center;
+}
+
 .block3 {
     display: flex;
     flex-direction: column;
@@ -123,12 +123,19 @@
 
 .accessProfile-block p {
     padding-bottom: 20px;
+    font-size: 3.6em;
 }
 
+.accessProfile-block a {
+    padding-bottom: 20px;
+    padding-top: 40px;
+}
+
+
 #accessProfile-img {
-   width:200px;
-   height:200px;
-   border-radius:100px;
+   width:300px;
+   height:300px;
+   border-radius:150px;
    border: 3px solid #ffcb47;
    object-fit: cover;
 }
@@ -147,7 +154,7 @@
 .find-block > p {
     text-align: center;
     width: 90%;
-    padding: 20px
+    padding: 20px;
 }
 
 #see-profiles {
@@ -162,7 +169,7 @@
     padding-bottom: 25px;
     padding-left: 60px;
     padding-right: 60px;
-    font-size: 1.8rem;
+    font-size: 1.7em;
 }
 
 #see-events a button {
@@ -177,7 +184,9 @@
     margin-bottom: 80px;
 }
 
-
+.feed-find-p{
+    font-size: 3.7em;
+}
 
 
 
