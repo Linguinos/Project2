@@ -50,7 +50,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: relative;
   width: 100%;
   background-color: #1f2421;
   padding: 5px;

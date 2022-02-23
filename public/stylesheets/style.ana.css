@@ -1,12 +1,8 @@
 
 /* FORMS */
-.login-container{
-    padding-top: 3rem;
-    
-}
 
 .form{
-    background-color: #86cb92;
+    background-color: white;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -15,7 +11,7 @@
 }
 
 .form-details{
-    background-color: #86cb92;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -39,8 +35,19 @@
 }
 
 .element{
-    margin: 10px
+
+    margin: 10px;
+    border-radius: 20px;
+    border-radius: 2px;
 }
+
+.form-element{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    border-radius: 20px;
+}
+
 
 
 /* PROFILE */
