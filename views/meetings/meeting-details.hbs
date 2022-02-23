@@ -17,16 +17,17 @@
 
 
 <section class="flexAleix" id="eventDetailsParticipants">
-    <div>
+    <div class="joinBtn">
         <form action="/meetings/{{meeting._id}}/join" method="POST">
             <button type="submit">Join this event</button>
         </form>
     </div>
 
     <div class="attendees">
-        <h1>Atendees: </h1>
+        <h1>Attendees: </h1>
         <div class="host">
-            <p>Hosted by: {{meeting.host.username}}</p>
+            <p>Hosted by:</p>
+            <h3>{{meeting.host.username}}</h3>
             <p>Contact: {{meeting.host.email}}</p>
         </div>
         <div class="attendeesNames">
