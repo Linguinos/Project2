@@ -33,6 +33,12 @@
     flex-direction: column;
     align-items: center;
     margin: 5px;
+    
+}
+
+.submit-btn button {
+    font-size: 2rem;
+    font-weight: 600;
 }
 
 #signup-btn{
@@ -40,6 +46,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#login-btn {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#login-btn button {
+    margin-top: 20px;
+    font-size: 1.5rem;
 }
 
 .element{

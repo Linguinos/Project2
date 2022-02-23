@@ -1,23 +1,23 @@
 <div class="login-container">
 <section class="form">
-<h2>Log in</h2>
+<h1>Log in</h1>
 
 <div class="form-details">
 <form action="/auth/login" method="POST">
 
-  <div class="element">
+  <div class="form-element">
    <label> Name:
       <input type="text" name="username">
    </label>
   </div>
 
-  <div class="element">
+  <div class="form-element">
    <label> Email:
       <input type="email" name="email">
    </label>
    </div>
 
-  <div class="element">
+  <div class="form-element">
    <label> Password:
       <input type="password" name="password">
    </label>
@@ -25,19 +25,17 @@
 
   <div class="submit-btn">
    <button type="submit">Submit</button>
-  </div>
+
 </form>
 </div>
 
-<div class="home-btn">
-<form action="/auth/signup" method="GET">
- 
+<div id="login-btn">
   <p>Not a member yet? </p>
-
-   <div id="signup-btn">
-  <button type="submit">Sign up</button>
-   </div>
-</form>
+   <form action="/auth/signup" method="GET">
+      <div id="signup-btn">
+         <button type="submit">Sign up</button>
+      </div>
+   </form>
 </div>
 </section>
 </div>
