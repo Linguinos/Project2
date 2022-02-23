@@ -77,3 +77,12 @@ nav h1 {
   padding-right: 10px;
 }
 
+footer {
+  background-color: #1f2421;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
