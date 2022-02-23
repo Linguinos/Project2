@@ -24,7 +24,7 @@ const userSchema = new Schema({
 		required: false
 	},
 	languageSpeak: {
-		type: String,
+		type: [String],
 		required: false,
 		enum: ['English', 'Spanish', 'Catalan',
         'French', 'Italian', 'German',
@@ -34,7 +34,7 @@ const userSchema = new Schema({
         'Greek', 'Others']
 	},
 	languageLearn: {
-		type: String,
+		type: [String],
 		required: false,
 		enum: ['English', 'Spanish', 'Catalan',
         'French', 'Italian', 'German',

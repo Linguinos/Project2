@@ -18,6 +18,7 @@ hbs.registerHelper("equals", function (firstId, secondId) {
   else return false
 });
 
+
 // Middleware configuration
 module.exports = (app) => {
   // In development environment the app logs
