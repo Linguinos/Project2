@@ -14,13 +14,18 @@
 }
 
 #block1 {
-    color: white;
     padding: 8%;
-    background-image: url("/images/people-2.jpg");
+    background-image:
+        linear-gradient(rgba(207, 188, 13, 0.6), rgba(42, 14, 201, 0.6)), 
+        url('/images/people-2.jpg');
     background-position: center;
     background-size:cover;
     height: 300px;
+}
 
+#block1 > h2 {
+    font-size: 2rem;
+    color: white   
 }
 
 #block2 > h2 {
@@ -38,12 +43,16 @@
     text-align: center;
 }
 
-.index-block #login {
+ #index-login {
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    padding: 20px;
+    padding: 10px;
+    color: white;
+}
+
+#index-login > p {
 }
 
 #text-aboutUs {
@@ -55,18 +64,12 @@
     margin: 30px;
 }
 
-
 #index-logInButton {
    padding-top: 30px;
 }
 
 #index-logInButton > button {
-    background-color: white;
-    color: rgba(61, 54, 54, 0.952);
-    border: 1px solid grey;
-    border-radius: 20%;
 }
-
 
 .feed-container {
     padding-top: 80px;
@@ -91,7 +94,6 @@
     width: 60%;
     padding: 20px
 }
-
 
 .accessProfile-block {
     background-color: #6ccff6;
