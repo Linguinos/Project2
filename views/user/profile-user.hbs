@@ -5,52 +5,61 @@
     <a id="edit-profilebtn" href="/user/edit">Edit your profile</a>
   </div>
 
-  <div id="img-container">
-    <h2 class="element">{{username}}</h2>
-    <img class="profile-img" src="{{imgUrl}}"alt="default">     
-    <h2 class="element"> City: {{city}} </h2>
-    <h2 class="element"> Contact: {{email}} </h2>
-  </div>
 
+  <div id="img-container">
+    <h1 class="element">{{username}}</h1>
+    <img class="profile-img" src="{{imgUrl}}"alt="default">     
+    {{#if city}}
+        <div class="meetingIcon">
+            <img src="/images/pin-21501.png" alt="" class="pinIcon">
+            <p>{{city}}</p>
+        </div>
+    {{/if}}
+    <p class="contactEmail">Contact: <strong>{{email}}</strong></p>
+  </div>
 </section>
 
 <section class="profile-detailsFlex">
 
-  <div class="profile-details">
-    <h1>ABOUT ME</h1>
-    {{#if description}}
-      <h2 class="element"><em>"{{description}}"</em></h2>
-    {{else}}
-      <h2 class="element"><em>{{username}} still has no bio. Suspicious!</em></h2>
-    {{/if}}
-    <div class="languagesProfile">
-      <div>
-        <h2 class="element"> I can speak</h2>
-          {{#each languageSpeak}}
-           <h3>{{this}}</h3> 
-           {{/each}}
-      </div>
+    <div class="profile-details">
+        <h1>About</h1>
+        {{#if description}}
+            <h2 class="bioProfile"><em>"{{description}}"</em></h2>
+        {{else}}
+            <h2 class="bioProfile"><em>{{username}} still has no bio. Suspicious!</em></h2>
+        {{/if}}
 
-      <div>
-        <h2 class="element"> I want to learn</h2>
-        
-        {{#each languageLearn}}
-         <h3>{{this}}</h3> 
-        {{/each}}
-        
-      </div>
+
+        <div class="languagesProfile">
+            <div>
+                <h2 class="element"> I can speak</h2>
+                <ul>
+                    {{#each languageSpeak}}
+                        <h3 class="element">{{this}}</h3>
+                    {{/each}}
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="element"> I want to learn</h2>
+                <ul>
+                    {{#each languageLearn}}
+                        <h3 class="element">{{this}}</h3>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+
+        <div class="scheduleAndPreference">
+            {{#if schedule}}<h2 class="element"> Schedule: <span>{{schedule}}</span></h2>{{/if}}
+            <h2 class="element"> I prefer to meet: <span>{{meetingPreference}}</span></h2>
+        </div>
     </div>
-      <div>
-
-      </div>
-      <h2 class="element"> Prefered schedule:   {{schedule}} </h2>
-      <h2 class="element"> I prefer to meet:   {{meetingPreference}} </h2> 
-  </div>
 
 </section>
 
 <section class="flexAleix" id="profileEvents">
-    <h2>Hosted events</h2>
+    <h1>Hosted events</h1>
 
     <div class="width80">
         {{#if meetings}}
@@ -59,16 +68,18 @@
                     <div>
                         <h3>{{name}}</h3>
                         
-                        <div class="meetingIcon">
-                            <img src="/images/pin-21501.png" alt="" class="pinIcon">
-                            <p>{{city}}</p>
-                        </div>
+                        {{#if city}}
+                            <div class="meetingIcon">
+                                <img src="/images/pin-21501.png" alt="" class="pinIcon">
+                                <p>{{city}}</p>
+                            </div>
+                        {{/if}}
 
                         <p>{{language}}</p>
 
                     </div>
-                    <div>
-                        <a href="/meetings/{{_id}}">See more details</a>
+                    <div class="meetingDetails">
+                        <a href="/meetings/{{_id}}" class="">See more details</a>
                     </div>
                 </div>
             {{/each}}
@@ -79,7 +90,7 @@
         {{/if}}
     </div>
 
-    <h2>Joined events</h2>
+    <h1>Joined events</h1>
 
     <div class="width80">
         {{#if meetingsAttended}}
@@ -88,15 +99,17 @@
                     <div>
                         <h3>{{name}}</h3>
                         
-                        <div class="meetingIcon">
-                            <img src="/images/pin-21501.png" alt="" class="pinIcon">
-                            <p>{{city}}</p>
-                        </div>
+                        {{#if city}}
+                            <div class="meetingIcon">
+                                <img src="/images/pin-21501.png" alt="" class="pinIcon">
+                                <p>{{city}}</p>
+                            </div>
+                        {{/if}}
 
                         <p>{{language}}</p>
 
                     </div>
-                    <div>
+                    <div class="meetingDetails">
                         <a href="/meetings/{{_id}}">See more details</a>
                     </div>
                 </div>

@@ -27,12 +27,20 @@
         <div class="languagesProfile">
             <div>
                 <h2 class="element"> I can speak</h2>
-                <h3 class="element">{{languageSpeak}}</h3>
+                <ul>
+                    {{#each languageSpeak}}
+                        <h3 class="element">{{this}}</h3>
+                    {{/each}}
+                </ul>
             </div>
 
             <div>
                 <h2 class="element"> I want to learn</h2>
-                <h3 class="element">{{languageLearn}}</h3>
+                <ul>
+                    {{#each languageLearn}}
+                        <h3 class="element">{{this}}</h3>
+                    {{/each}}
+                </ul>
             </div>
         </div>
 
