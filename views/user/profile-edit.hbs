@@ -1,113 +1,112 @@
 <div class="login-container">
 
-<section class="form">
-<h2>Edit profile</h2>
+  <section class="form">
+    <h1>Edit profile</h1>
 
-<div class="form-details">
-<form action="/user/edit" method="POST" enctype="multipart/form-data">
-  
-  <div class="form-element">
-  <label for="username"> Username:
-    <input type="text" name="username" value="{{username}}"/>
-  </label>
-  </div>
-  <br>
+    <div class="form-details">
+      <form action="/user/edit" method="POST" enctype="multipart/form-data">
+        
+        <div class="form-element">
+          <label for="username"> Username:
+            <input type="text" name="username" value="{{username}}"/>
+          </label>
+        </div>
+        <br>
 
-  <div class="form-element">
-  <label for="description"> Bio:
-    <input type="text" name="description" value="{{description}}"/> 
-  </label>
-  </div>
-  <br>
-  
-  <div class="form-element">
-  <label for="city"> City:
-    <input type="text" name="city" value="{{city}}"/> 
-  </label>
-  </div>
-  <br>
+        <div class="form-element">
+          <label for="description"> Bio:
+            <input type="text" name="description" value="{{description}}"/> 
+          </label>
+        </div>
+        <br>
+        
+        <div class="form-element">
+          <label for="city"> City:
+            <input type="text" name="city" value="{{city}}"/> 
+          </label>
+        </div>
+        <br>
 
-  <div class="form-element">
-  <label for="languageSpeak"> Languages I speak:
-    <select name="languageSpeak" multiple> 
-            <option value="English">English</option>
-            <option value="Spanish">Spanish</option>
-            <option value="Catalan">Catalan</option>
-            <option value="French">French</option>
-            <option value="Italian">Italian</option>
-            <option value="German">German</option>
-            <option value="Chinese">Chinese</option>
-            <option value="Japanese">Japanese</option>
-            <option value="Hindi">Hindi</option>
-            <option value="Russian">Russian</option>
-            <option value="Dutch">Dutch</option>
-            <option value="Swedish">Swedish</option>
-            <option value="Portuguese">Portuguese</option>
-            <option value="Korean">Korean</option>
-            <option value="Polish">Polish</option>
-            <option value="Greek">Greek</option>
-            <option value="Others">Others</option>
-        </select>
-  </label>
-  </div>
-  <br>
-  
-  <div class="form-element">
-  <label for="languageLearn"> Languages I want to learn:
-        <select name="languageLearn" multiple> 
-            <option value="English">English</option>
-            <option value="Spanish">Spanish</option>
-            <option value="Catalan">Catalan</option>
-            <option value="French">French</option>
-            <option value="Italian">Italian</option>
-            <option value="German">German</option>
-            <option value="Chinese">Chinese</option>
-            <option value="Japanese">Japanese</option>
-            <option value="Hindi">Hindi</option>
-            <option value="Russian">Russian</option>
-            <option value="Dutch">Dutch</option>
-            <option value="Swedish">Swedish</option>
-            <option value="Portuguese">Portuguese</option>
-            <option value="Korean">Korean</option>
-            <option value="Polish">Polish</option>
-            <option value="Greek">Greek</option>
-            <option value="Others">Others</option>
-        </select> 
-  </label>
-  </div>
-  <br>
+        <div class="form-element">
+          <label for="languageSpeak"> Languages I speak:
+            <select name="languageSpeak" multiple> 
+                  <option value="English">English</option>
+                  <option value="Spanish">Spanish</option>
+                  <option value="Catalan">Catalan</option>
+                  <option value="French">French</option>
+                  <option value="Italian">Italian</option>
+                  <option value="German">German</option>
+                  <option value="Chinese">Chinese</option>
+                  <option value="Japanese">Japanese</option>
+                  <option value="Hindi">Hindi</option>
+                  <option value="Russian">Russian</option>
+                  <option value="Dutch">Dutch</option>
+                  <option value="Swedish">Swedish</option>
+                  <option value="Portuguese">Portuguese</option>
+                  <option value="Korean">Korean</option>
+                  <option value="Polish">Polish</option>
+                  <option value="Greek">Greek</option>
+                  <option value="Others">Others</option>
+                </select>
+          </label>
+        </div>
+        <br>
+        
+        <div class="form-element">
+          <label for="languageLearn"> Languages I want to learn:
+                <select name="languageLearn" multiple> 
+                  <option value="English">English</option>
+                  <option value="Spanish">Spanish</option>
+                  <option value="Catalan">Catalan</option>
+                  <option value="French">French</option>
+                  <option value="Italian">Italian</option>
+                  <option value="German">German</option>
+                  <option value="Chinese">Chinese</option>
+                  <option value="Japanese">Japanese</option>
+                  <option value="Hindi">Hindi</option>
+                  <option value="Russian">Russian</option>
+                  <option value="Dutch">Dutch</option>
+                  <option value="Swedish">Swedish</option>
+                  <option value="Portuguese">Portuguese</option>
+                  <option value="Korean">Korean</option>
+                  <option value="Polish">Polish</option>
+                  <option value="Greek">Greek</option>
+                  <option value="Others">Others</option>
+                </select> 
+          </label>
+        </div>
+        <br>
 
- <div class="form-element">
- <label> Preferred schedule:
-    <input type="text" name="schedule" value="{{schedule}}"/> 
-  </label>
-  </div>
-   <br>
+        <div class="form-element">
+          <label> Preferred schedule:
+              <input type="text" name="schedule" value="{{schedule}}"/> 
+          </label>
+        </div>
+        <br>
 
-<div class="form-element">
- <label> I prefer to meet:
-   <select name="meetingPreference"> 
-     <option value="online">online</option>
-     <option value="in-person">in-person</option>
-     <option value="both">Both</option>
-   </select>
-  </label>
-  </div>
+        <div class="form-element">
+          <label> I prefer to meet:
+            <select name="meetingPreference"> 
+              <option value="online">online</option>
+              <option value="in-person">in-person</option>
+              <option value="both">Both</option>
+            </select>
+          </label>
+        </div>
+        <br>
 
-   <br>
+        <div class="form-element">
+          <label> Profile picture:
+            <input type="file" name="imgUrl">
+          </label>
+        </div>
+        <br>
 
-  <div class="form-element">
-  <label> Profile picture:
-    <input type="file" name="imgUrl">
-  </label>
-  </div>
-  <br>
+        <div class="submit-btn">
+          <button type="submit"> Update profile </button>
+        </div>
+      </form>
 
-<div class="submit-btn">
-  <button type="submit"> Update profile </button>
-</form>
-</div>
-
-</div>
-</section>
+    </div>
+  </section>
 </div>
