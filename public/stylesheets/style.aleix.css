@@ -16,10 +16,6 @@
     margin: 20px;
 }
 
-/*.flexMeeting>div>*{
-    padding: 5px;
-}*/
-
 .flexResults{
     display: flex;
     flex-direction: column;
@@ -102,6 +98,10 @@
 }
 
 .pinIcon {
+    height: 40px;
+}
+
+#profileEvents .meetingIcon>.pinIcon {
     height: 25px;
 }
 
@@ -110,6 +110,10 @@
     justify-content: baseline;
     align-items: center;
     font-weight:700;
+}
+
+#img-container>.meetingIcon>p  {
+    font-size: 3rem;
 }
   
 #meetingCreateSection{
@@ -208,26 +212,21 @@
     font-weight: 600;
 }
 
-#img-container>.meetingIcon>p {
-    /*font-size: 1.6rem;*/
-}
-
 .profile-details>.bioProfile {
     font-weight: 400; 
-    /*font-size: 1.3rem;*/
 }
 
-.languagesProfile>div>h2 {
-    /*font-size: 1.3rem;*/
-}
-
-.languagesProfile h3 {
+.languagesProfile h2 {
     font-weight: 600;
-    /*font-size: 1.3rem;*/
+    font-size: 2.5rem;
+}
+
+.languagesProfile p {
+    font-size: 2.5rem;
 }
 
 .languagesProfile>div{
-    margin-top: 15px;
+    margin-top: 60px;
 }
 
 .profile-details>*{
@@ -236,7 +235,6 @@
 
 .scheduleAndPreference>h3{
     margin-top: 40px;
-    /*font-size: 1.3rem;*/
 }
 
 .scheduleAndPreference span {
@@ -260,18 +258,12 @@
     text-decoration: none;
 }
 
-.flexMeeting h3 {
-    /*font-size: 1.6rem;*/
-}
-
 .flexMeeting>div>p {
     font-weight: 600;
-    /*font-size: 1.3rem;*/
 }
 
 .flexMeeting>div>div>p {
     font-weight: 400;
-    /*font-size: 1.6rem;*/
 }
 
 .attendees {
