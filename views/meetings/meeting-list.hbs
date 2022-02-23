@@ -1,13 +1,15 @@
 <section class="flexAleix" id="meetingCreateSection">
-    <h2>Create your own event</h2>
-    <a href="/meetings/create"> <button type="submit">Create</button> </a>
+    <a href="/meetings/create"> <button type="submit" id="createEvent-button">Creat your new Event +</button > </a>
 </section>
 
 <section class="flexAleix" id="meetingSearchSection">
-    <h2>Find what you need</h2>
+    <h3>Find what you need</h3>
+
+  <div id="filterEvent-form">
+
     <form action="/meetings" method="POST">
 
-        <div>
+        
             <label for="language"> Language:
             <select name="language"> 
                     <option value="English">English</option>
@@ -29,11 +31,14 @@
                     <option value="Others">Others</option>
                 </select>
             </label>
-        </div>
+        
 
-        <div>
-            <button type="submit">Filter events</button>
+        <div id="searchEvent-button">
+            <button type="submit" >Filter events</button>
+
         </div>
+   </div>
+    
     </form>
 </section>
 
