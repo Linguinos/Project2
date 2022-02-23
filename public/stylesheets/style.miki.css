@@ -1,5 +1,4 @@
 .index-container {
-    padding-top: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,6 +13,25 @@
     padding: 20px;
 }
 
+#block1 {
+    color: white;
+    padding: 8%;
+    background-image: url("/images/people-2.jpg");
+    background-position: center;
+    background-size:cover;
+    height: 300px;
+
+}
+
+#block2 > h2 {
+    padding:10px 0 10px 0;
+}
+
+#block2 > p {
+    padding: 10px 0 20px 0;
+    font-size: 1.4rem;
+}
+
 .index-block > h2 {
     font-size: 2rem;
     width: 60%;
@@ -24,6 +42,7 @@
     display:flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     padding: 20px;
 }
 
@@ -36,9 +55,14 @@
     margin: 30px;
 }
 
+
 #index-logInButton {
+   padding-top: 30px;
+}
+
+#index-logInButton > button {
     background-color: white;
-    color: black;
+    color: rgba(61, 54, 54, 0.952);
     border: 1px solid grey;
     border-radius: 20%;
 }
@@ -53,31 +77,30 @@
 }
 
 .find-block {
+    background-color: #ffcb47;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
     padding-top: 40px;
     padding-bottom: 40px;
+}
+
+.find-block > p {
+    text-align: center;
     width: 60%;
 }
 
-.find-block p {
-    text-align: center;
-}
-
-.accessProfile-block p {
-    padding-bottom: 20px;
-}
 
 .accessProfile-block {
+    background-color: #6ccff6;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: justify;
 }
-
-
+   
 #accessProfile-img {
    width:200px;
    height:200px;
@@ -85,6 +108,16 @@
    border: 3px solid #ffcb47;
    object-fit: cover;
 }
+
+.accessProfile-block > a {
+    padding: 20px;
+}
+
+.accessProfile-block > p {
+    padding: 20px;
+}
+
+
 
  
 
