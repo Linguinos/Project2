@@ -6,28 +6,28 @@
 <div class="form-details">
 <form action="/user/edit" method="POST" enctype="multipart/form-data">
   
-  <div class="element">
+  <div class="form-element">
   <label for="username"> Username:
     <input type="text" name="username" value="{{username}}"/>
   </label>
   </div>
   <br>
 
-  <div class="element">
+  <div class="form-element">
   <label for="description"> Bio:
     <input type="text" name="description" value="{{description}}"/> 
   </label>
   </div>
   <br>
   
-  <div class="element">
+  <div class="form-element">
   <label for="city"> City:
     <input type="text" name="city" value="{{city}}"/> 
   </label>
   </div>
   <br>
 
-  <div class="element">
+  <div class="form-element">
   <label for="languageSpeak"> Languages I speak:
     <select name="languageSpeak" multiple> 
             <option value="English">English</option>
@@ -52,7 +52,7 @@
   </div>
   <br>
   
-  <div class="element">
+  <div class="form-element">
   <label for="languageLearn"> Languages I want to learn:
         <select name="languageLearn" multiple> 
             <option value="English">English</option>
@@ -77,14 +77,14 @@
   </div>
   <br>
 
- <div class="element">
+ <div class="form-element">
  <label> Preferred schedule:
     <input type="text" name="schedule" value="{{schedule}}"/> 
   </label>
   </div>
    <br>
 
-<div class="element">
+<div class="form-element">
  <label> I prefer to meet:
    <select name="meetingPreference"> 
      <option value="online">online</option>
@@ -96,7 +96,7 @@
 
    <br>
 
-  <div class="element">
+  <div class="form-element">
   <label> Profile picture:
     <input type="file" name="imgUrl">
   </label>
