@@ -175,3 +175,9 @@
 .attendeesNames {
     width: 100%;
 }
+
+/* Profile Titles size */
+
+h1 {
+    font-size: 2rem;
+}
