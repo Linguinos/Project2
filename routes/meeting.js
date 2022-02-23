@@ -8,24 +8,6 @@ const Api = require("../apis/api");
 const isNotLoggedIn = require("../middleware/isNotLoggedIn");
 const isLoggedIn = require("../middleware/isLoggedIn");
 
-router
-  .route("/")
-  .get(isLoggedIn, (req, res) => {
-    Meeting.find()
-      .then((meetings) => {
-        res.render("meetings/meeting-list", { meetings });
-      })
-      .catch((err) => console.log(err));
-  })
-  .post(isLoggedIn, (req, res, next) => {
-    const language = req.body.language;
-
-    Meeting.find({ language: language })
-      .then((meetings) => {
-        res.render("meetings/meeting-list", { meetings });
-      })
-      .catch((err) => console.log(err));
-  });
 
 router
   .route("/create")
@@ -65,10 +47,30 @@ router.get("/:id", isLoggedIn, (req, res) => {
     .populate("host")
     .populate("attendees")
     .then((meeting) => {
-      res.render("meetings/meeting-details", meeting);
+      res.render("meetings/meeting-details", {meeting, userId: req.session.userId});
     })
     .catch((error) => console.log(error));
 });
+
+router
+  .route("/")
+  .get(isLoggedIn, (req, res) => {
+    Meeting.find()
+      .then((meetings) => {
+        res.render("meetings/meeting-list", { meetings });
+      })
+      .catch((err) => console.log(err));
+  })
+  .post(isLoggedIn, (req, res, next) => {
+    const language = req.body.language;
+
+    Meeting.find({ language: language })
+      .then((meetings) => {
+        res.render("meetings/meeting-list", { meetings });
+      })
+      .catch((err) => console.log(err));
+  });
+
 
 router.post("/:id/delete", (req, res, next) => {
   const id = req.params.id;
