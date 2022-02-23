@@ -85,6 +85,27 @@
     margin: 20px;
 }
 
+.flexProfile2>div>p {
+    font-weight: 600;
+}
+
+.flexProfile2>div {
+    width: 50%;
+}
+
+.flexProfile2 ul {
+    margin-bottom: 20px;
+}
+
+.profileListButton {
+    padding: 10px;
+    background-color: #6ccff6;
+    border: 0px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+}
+
 .profileImgResults {
    width:200px;
    height:200px;

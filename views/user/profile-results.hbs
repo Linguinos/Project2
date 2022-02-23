@@ -89,10 +89,18 @@
                     <div>
                         <p>{{city}}</p>
                         <p>I speak:</p>
-                        <p>{{languageSpeak}}</p>
+                        <ul>
+                            {{#each languageSpeak}}
+                                <p>{{this}}</p>
+                            {{/each}}
+                        </ul>
                         <p>I want to learn:</p>
-                        <p>{{languageLearn}}</p>
-                        <a href="/user/{{_id}}">See more</a>
+                        <ul>
+                            {{#each languageLearn}}
+                                <p>{{this}}</p>
+                            {{/each}}
+                        </ul>
+                        <a href="/user/{{_id}}" class="profileListButton">See more</a>
                     </div>
                 </div>
             </div>
