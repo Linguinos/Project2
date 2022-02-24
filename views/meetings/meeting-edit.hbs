@@ -1,18 +1,18 @@
 <div class="login-container">
 
 <section class="form">
-    <h2>Meeting</h2>
+    <h1>Meeting</h1>
 
 <div class="form-details">
 <form action="/meetings/{{_id}}/edit" method="POST">
 
-    <div class="element">
+    <div class="form-element">
       <label for="name">Name: 
         <input type="text" name="name" id="" value="{{name}}">
       </label>
     </div>
 
-    <div class="element">
+    <div class="form-element">
       <label for="typeOfMeeting"> Type of event:
         <select name="typeOfMeeting"> 
             <option value="1-on-1">1-on-1</option>
@@ -23,7 +23,7 @@
       </label>
     </div>
 
-   <div class="element">
+   <div class="form-element">
      <label for="language"> Language:
         <select name="language"> 
             <option value="English">English</option>
@@ -47,31 +47,30 @@
      </label>
     </div>
 
-    <div class="element">
+    <div class="form-element">
       <label for="schedule">Day: 
         <input type="date" name="schedule" id="" value="{{schedule}}">
       </label>
     </div>
 
-    <div class="element">
+    <div class="form-element">
       <label for="time">Time: 
         <input type="time" name="time" id="" value="{{time}}">
       </label>
     </div>
 
-    <div class="element">
+    <div class="form-element">
       <label for="city">City: 
         <input type="text" name="city" id="" value="{{city}}">
       </label>
     </div>
 
-    <div class="element">
+    <div class="form-element">
       <label for="description">Description: 
         <input type="text" name="description" id=""value="{{description}}">
       </label>
     </div>
     
-<hr>
   <div class="submit-btn">
     <button type="submit">Save changes</button>
     </form>
