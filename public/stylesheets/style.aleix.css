@@ -147,6 +147,7 @@
 
 #img-container>.meetingIcon>p  {
     font-size: 3rem;
+    color: 037171;
 }
   
 #meetingCreateSection{
@@ -220,15 +221,18 @@
 
 #resultsSearchSection {
     background-color: #ffcb47;
+    background-image: url('/images/parlem6.png');
     height: 300px;
 }
 
 #resultsListSection {
-    background-color: #ffe2fe;
+    background-color: #D9BBF9;
+    padding-bottom: 60px;
 }
 
 #resultsListSection>h1{
     margin: 30px;
+    color: white;
 }
 
 /* Event details */
@@ -328,12 +332,13 @@
 }
 
 #profileEvents>h1{
-    padding-top: 40px;
+    padding-top: 60px;
+    color: white;
 }
 
 .meetingDetails {
     padding: 10px;
-    background-color: #6ccff6;
+    background-color: #037171;
     border: 0px;
     border-radius: 10px;
     text-decoration: none;
@@ -342,6 +347,7 @@
 .meetingDetails a {
     color: white;
     text-decoration: none;
+    font-weight: 600;
 }
 
 .flexMeeting>div>p {
