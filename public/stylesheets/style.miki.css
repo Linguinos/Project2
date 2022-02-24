@@ -19,18 +19,18 @@
         url('/images/people-2.jpg');
     background-position: center;
     background-size:cover;
-    height:20%;
 }
 
 #block1 {
     padding-top:5%;
+    height: 800px;
 }
 
 #block1 > h1 {
     text-align: center;
     width: 85%;
     font-size: 2.9rem;
-    color:  #ffcb47; 
+    color:  #ffffff; 
     padding: 30px;
 }
 
@@ -83,11 +83,17 @@
     font-size: 1.5rem;
 }
 
+
+#block2 {
+height: 450px;
+font-size: 1.8em;
+padding-top: 50px;
+}
+
 #block2 > h1 {
     padding:20px 0 20px 0;
     width: 60%;
     text-align: center;
-    height: ;
 }
 
 .block3 {
@@ -95,6 +101,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 500px;
 }
 
 #block3-img {
