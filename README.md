@@ -18,7 +18,12 @@ Comments & reviews
 Events
     • Users can search for events that might interest them: online, in person, 1-to-1 or in group and in different cities. All users can view and join the events but only the host (creator) user can edit and delete them.
 
-Route	Views	Description	Persmissions
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+Route	Views	Description	 Persmissions
 GET "/"	index.hbs	renders the homepage/login	All
 /auth			
 GET/POST "/signup"	signup.hbs	renders the signup form for users	All
