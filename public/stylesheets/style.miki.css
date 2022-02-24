@@ -14,7 +14,8 @@
 }
 
 #block1 {
-    padding: 100px;    
+    padding: 100px; 
+    height: 65%;   
 }
 
 #block2 {
@@ -73,8 +74,7 @@
         linear-gradient(rgba(202, 197, 183, 0.4), rgba(38, 9, 172, 0.6)), 
         url('/images/people-2.jpg');
     background-position: center;
-    background-size:cover;
-    width: 100%;
+    background-size:cover;;
     height: 100%;
 }
 
