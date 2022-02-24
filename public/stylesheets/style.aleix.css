@@ -145,7 +145,14 @@
 
 #createEvent-button{
     font-size: 1.5em;
-    padding: 10px 25px 10px 25px
+    font-weight: bolder;
+    padding: 10px 25px 10px 25px;
+    border:1px solid black;
+}
+
+#meetingCreateSection > h3 {
+    padding: 10px;
+    font-weight: bold;
 }
 
 
@@ -166,7 +173,7 @@
 #filterEvent-form select {
     padding: 10px;
     font-size: 1em;
-    background-color: rgb(201, 187, 187);
+    background-color: white;
     border-radius: 20px;
 }
 #filterEvent-form label {
