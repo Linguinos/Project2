@@ -216,7 +216,7 @@
     padding: 20px;
 }
 
-#meetingSearchSection h3, label {
+#meetingSearchSection h3, #meetingSearchSection label {
     color: white;
 }
 
