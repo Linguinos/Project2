@@ -74,7 +74,8 @@
         linear-gradient(rgba(202, 197, 183, 0.4), rgba(38, 9, 172, 0.6)), 
         url('/images/people-2.jpg');
     background-position: center;
-    background-size:cover;;
+    background-size:cover;
+    width: 100%;
     height: 100%;
 }
 
