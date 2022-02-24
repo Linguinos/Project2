@@ -1,14 +1,11 @@
-<div class="login-container">
-
 <section class="profile-header">
-    <div id="editBtnDiv">
-        <a id="edit-profilebtn" href="/user/edit">Edit your profile</a>
-    </div>
-
 
     <div id="img-container">
         <h1 class="element">{{username}}</h1>
         <img class="profile-img" src="{{imgUrl}}"alt="default">     
+        <p id="editBtnLink">
+            <a id="edit-profilebtn" href="/user/edit">Edit your profile</a>
+        </p>
         {{#if city}}
             <div class="meetingIcon">
                 <img src="/images/pin-21501.png" alt="" class="pinIcon">
@@ -17,6 +14,7 @@
         {{/if}}
         <p class="contactEmail">Contact: <strong>{{email}}</strong></p>
     </div>
+
 </section>
 
 <section class="profile-detailsFlex">
@@ -123,5 +121,3 @@
         {{/if}}
     </div>
 </section>
-
-</div>
