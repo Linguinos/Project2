@@ -1,83 +1,73 @@
-/*---INDEX VIEW---------------------------------*/
-
-#forFotter{
-    height: 100%;
-}
-
 .index-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
-    width: 100%;     
+    align-items: center;    
 }
 
 #block1 {
-    padding: 100px;    
+    padding-top:5%;
+    height: 800px;
 }
 
 #block2 {
+    height: 450px;
     font-size: 1.8em;
-    padding: 50px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    backdrop-filter: blur(20px);
-}
-
-#block2 p {
-    height: 200px;
-    font-size: 2em;
-    padding-bottom: 50px;
-    text-align: center;
-}
-
-#block2 > h1 {
-    padding:20px 0 20px 0;
-    text-align: center;
-    height: 100px;
-}
-
-#index-login {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding: 50px;
-    color: white;
-}
-
-#block1 > h1 {
-    text-align: center;
-    width: 85%;
-    font-size: 6.8em;
-    color:  #ffffff; 
-    padding: 30px;
-}
-
-#index-login > p {
-    font-size: 4.5em;
-    font-weight: bold;
+    padding-top: 50px;
 }
 
 .index-block {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    /*padding: 20px;*/
 }
 
 #background-img {
     background-image:
-        linear-gradient(rgba(202, 197, 183, 0.4), rgba(38, 9, 172, 0.6)), 
+        linear-gradient(rgba(202, 197, 183, 0.6), rgba(6, 91, 124, 0.6)), 
         url('/images/people-2.jpg');
     background-position: center;
     background-size:cover;
-    width: 100%;
 }
 
+
+
+#block1 > h1 {
+    text-align: center;
+    width: 85%;
+    font-size: 2.9rem;
+    color:  #ffffff; 
+    padding: 30px;
+}
+
+#block1 p {
+    font-size: 1.9rem;
+}
+
+#text-aboutUs {
+    padding: 10px 0 20px 0;
+    width: 70%;
+    font-size: 2em;
+    text-align: justify;
+    text-align: center;
+}
+
+
+ #index-login {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    color: white;
+}
+
+
 #index-signUpButton {
-    padding: 100px;
+    padding: 50px;
+
 }
 
 #index-signUpButton button {
@@ -85,27 +75,45 @@
     padding-bottom: 20px;
     padding-left: 50px;
     padding-right: 50px;
-    font-size: 5em;
+    font-size: 1.5rem;
 }
 
 #index-logInButton {
-   padding-top: 100px;
+   padding-top: 50px;
 }
 
 #index-logInButton button {
     background-color: #ffcb47;
-    color:black;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 50px;
     padding-right: 50px;
-    font-size: 5em;
+    font-size: 1.5rem;
 }
 
 
 
 
-/*-----FEED VIEW---------------------------------*/
+#block2 > h1 {
+    padding:20px 0 20px 0;
+    width: 60%;
+    text-align: center;
+}
+
+.block3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+#block3-img {
+    width: 40%;
+    padding: 40px;
+}
+
+/*-------------EMPIEZA la VIEW FEED---------------------------------*/
 
 .feed-container {
     padding-top: 80px;
