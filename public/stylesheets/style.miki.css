@@ -5,6 +5,17 @@
     align-items: center;    
 }
 
+#block1 {
+    padding-top:5%;
+    height: 800px;
+}
+
+#block2 {
+    height: 450px;
+    font-size: 1.8em;
+    padding-top: 50px;
+}
+
 .index-block {
     display: flex;
     flex-direction: column;
@@ -21,10 +32,7 @@
     background-size:cover;
 }
 
-#block1 {
-    padding-top:5%;
-    height: 800px;
-}
+
 
 #block1 > h1 {
     text-align: center;
@@ -84,11 +92,7 @@
 }
 
 
-#block2 {
-height: 450px;
-font-size: 1.8em;
-padding-top: 50px;
-}
+
 
 #block2 > h1 {
     padding:20px 0 20px 0;
@@ -109,6 +113,7 @@ padding-top: 50px;
     padding: 40px;
 }
 
+/*-------------EMPIEZA la VIEW FEED---------------------------------*/
 
 .feed-container {
     padding-top: 80px;
