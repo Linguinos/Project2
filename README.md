@@ -4,7 +4,7 @@
 Become fluent in any language while making friends with native speakers 
 
 ## Description
-Language Exchanger is an app for connecting users willing to trade language learning practices with speakers of different languages.
+parlem. is an app for connecting users willing to trade language learning practices with speakers of different languages.
 
 ## Interaction
 There are 2 types of user interactions: by profiles or by events.
