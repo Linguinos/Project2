@@ -7,16 +7,13 @@ Become fluent in any language while making friends with native speakers
 Language Exchanger is an app for connecting users willing to trade language learning practices with speakers of different languages.
 
 ## Interaction
-There are 3 types of user interactions: by profiles, by comments or by events.
+There are 2 types of user interactions: by profiles or by events.
 
 ## Profiles
-    • A user’s flow will be as follows: They register, or log in if they have already an account and land in the Main feed. From there, they can access their personal profile page, where they can edit it: add their language & meeting preferences, their favorite hobbies or memes, as well as have access to their events(created or registered).  If they go back to the Main feed, they can access the list of the other users’ profiles, sort them, filter them by their preferences, visit and read their profile page.
-
-## Comments & reviews
-    • A user can add a comment/post in other user’s profiles to suggest a meeting to practice a language, and rate their interaction later on if they had any. 
+A user’s flow will be as follows: They register, or log in if they have already an account, and land on the main feed. From there, they can access their personal profile page, where they can add their language & meeting preferences, as well as have access to their events(created or registered). If they go back to the main feed, they can access the list of the other users’ profiles, sort them, filter them by their preferences, visit and read their profile page, as well as do the same with the events.
 
 ## Events
-    • Users can search for events that might interest them: online, in person, 1-to-1 or in group and in different cities. All users can view and join the events but only the host (creator) user can edit and delete them.
+ Users can search for events that might interest them: online, in person, 1-to-1 or in group and in different cities. All users can view and join the events but only the host (creator) user can edit and delete them.
  
 
 ## Pages
