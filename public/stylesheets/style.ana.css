@@ -75,7 +75,8 @@
 }
 
 .form-element label {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    margin: 20px;
 }
 
 .form-element input {
@@ -97,6 +98,15 @@
     font-family: 'Montserrat', sans-serif;
     border-radius: 10px;
     border: 0.5px solid grey;
+}
+
+.login-container {
+    background-color: #6ccff6;
+    height: 100vh;
+}
+
+.login-container-feed {
+    height: 100vh;
 }
 
 
@@ -173,11 +183,10 @@
     padding-top: 10px;
 }
 
-#editBtnDiv {
+#editBtnLink {
     display: flex;
-    justify-content: right;
+    justify-content: center;
     padding-top: 20px;
-    padding-right: 20px;
 }
 
 #editBtnDiv a {
@@ -192,7 +201,8 @@
     border-radius: 10px;
     color: white;
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 2rem;
+    font-weight: 600;
 }
 
 .profile-events{

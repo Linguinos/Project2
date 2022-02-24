@@ -24,6 +24,12 @@
     width: 100%;
 }
 
+.flexResults p {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+}
+
 .flexFormInputs{
     display: flex;
     flex-direction: row;
@@ -32,6 +38,11 @@
     padding: 10px;
     width: 700px;
     padding: 10px;
+}
+
+.flexFormInputs button {
+    font-size: 2rem;
+    font-weight: 600;
 }
 
 .flexLabels {
@@ -44,8 +55,9 @@
 
 .flexLabels select {
     padding: 5px;
-    font-size: 1.3rem;
+    font-size: 2rem;
     border-radius: 20px;
+    background-color: white;
 }
 
 .flexLabels p {
@@ -202,14 +214,13 @@
 #resultsSearchSection {
     background-color: #ffcb47;
     height: 300px;
-    padding-top: 80px;
 }
 
 #resultsListSection {
     background-color: #ffe2fe;
 }
 
-#resultsListSection>h2{
+#resultsListSection>h1{
     margin: 30px;
 }
 
