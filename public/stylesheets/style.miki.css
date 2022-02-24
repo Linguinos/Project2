@@ -1,13 +1,21 @@
+/*---INDEX VIEW---------------------------------*/
+
+#forFotter{
+    height: 100vh;
+}
+
 .index-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;    
+    align-items: center; 
+    width: 100%;
+    height: 100%;     
 }
 
 #block1 {
-    padding-top:5%;
-    height: 800px;
+    padding: 100px; 
+    height: 65%;   
 }
 
 #block2 {
@@ -30,6 +38,8 @@
         url('/images/people-2.jpg');
     background-position: center;
     background-size:cover;
+    width: 100%;
+    height: 100%;
 }
 
 
