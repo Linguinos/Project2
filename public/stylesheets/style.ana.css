@@ -2,7 +2,7 @@
 /* FORMS */
 
 .form{
-    background-color: #6ccff6;
+    /*background-color: #6ccff6;*/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -97,11 +97,13 @@
     font-size: 1.6rem;
     font-family: 'Montserrat', sans-serif;
     border-radius: 10px;
+    background-color: white;
     border: 0.5px solid grey;
 }
 
 .login-container {
     background-color: #6ccff6;
+    background-image: url('/images/parlem5.png');
     height: 100vh;
 }
 
@@ -236,7 +238,7 @@
 
 #profileEvents {
     background-color: #6ccff6;
-    padding-bottom: 60px;
+    padding-bottom: 100px;
 }
 
 .edit-btn{

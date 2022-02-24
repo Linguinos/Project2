@@ -1,48 +1,46 @@
+<div class="feed-containerContainer ">
+  <div class="feed-container">
 
-<div class="feed-container">
+    <section class="accessProfile-block">
 
-  <section class="accessProfile-block">
+        <h2>Hi {{username}}!</h2>
 
-      <h2>Hi {{username}}!</h2>
+        <p>Acces your Profile</p>
 
-      <p>Acces your Profile</p>
+      <a href="/user/profile">
+      <img src="{{imgUrl}}" id="accessProfile-img">
+      </a>
 
-    <a href="/user/profile">
-    <img src="{{imgUrl}}" id="accessProfile-img">
-    </a>
+    </section>
 
-  </section>
+    <section class="find-block" id="see-profiles">
 
-  <section class="find-block" id="see-profiles">
+      <a href="/user/results" class="feed-find-button">
+      <button type="submit" class="find-button">See Profiles</button>
+      </a>
 
-    <a href="/user/results" class="feed-find-button">
-    <button type="submit" class="find-button">See Profiles</button>
-    </a>
+        <p class="feed-find-p">Find profiles that perfectly fit your needs. Filter them by language or type of meeting</p>
 
-      <p class="feed-find-p">Find profiles that perfectly fit your needs. Filter them by language or type of meeting</p>
-
-    
-  </section>
-
-  
-
-  <section class="find-block" id="see-events">
-
-    <a href="/meetings/" class="feed-find-button">
-    <button type="submit" class="find-button">See Events</button>
-    </a>
-
-      <p class="feed-find-p">Find and join amazing events creted by other users or create your own one.
-
-
-      </p>
+      
+    </section>
 
     
-  </section>
 
+    <section class="find-block" id="see-events">
+
+      <a href="/meetings/" class="feed-find-button">
+      <button type="submit" class="find-button">See Events</button>
+      </a>
+
+        <p class="feed-find-p">Find and join amazing events creted by other users or create your own one.
+
+
+        </p>
+
+      
+    </section>
+
+  </div>
 </div>
 
 
-
-
-    
