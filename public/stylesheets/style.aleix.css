@@ -214,6 +214,10 @@
     padding: 20px;
 }
 
+#meetingSearchSection h3, #meetingSearchSection label {
+    color: white;
+}
+
 #meetingListSection {
     padding: 10px;
     background-color: #6ccff6;
