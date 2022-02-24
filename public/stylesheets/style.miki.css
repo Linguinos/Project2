@@ -19,7 +19,7 @@
         url('/images/people-2.jpg');
     background-position: center;
     background-size:cover;
-    height:800px;
+    height:20%;
 }
 
 #block1 {
@@ -87,6 +87,7 @@
     padding:20px 0 20px 0;
     width: 60%;
     text-align: center;
+    height: ;
 }
 
 .block3 {
