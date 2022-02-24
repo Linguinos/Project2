@@ -1,10 +1,10 @@
 <section class="flexAleix" id="meetingCreateSection"> 
-    <h3>Create a new Event: </h3>
+    <h3>Create a new Event</h3>
     <a href="/meetings/create"><button type="submit" id="createEvent-button">+</button ></a>
 </section>
 
 <section class="flexAleix" id="meetingSearchSection">
-    <h3>Find what you need:</h3>
+    <h3>Find what you need</h3>
 
   <div id="filterEvent-form">
 
@@ -44,7 +44,7 @@
 </section>
 
 <section class="flexAleix" id="meetingListSection">
-    <h2>Browse all events</h2>
+    <h1>Browse all events</h1>
 
     <div class="width80">
         {{#each meetings}}
@@ -60,7 +60,7 @@
                     <p>{{language}}</p>
 
                 </div>
-                <div>
+                <div class="meetingDetails">
                     <a href="/meetings/{{_id}}">See more details</a>
                 </div>
             </div>

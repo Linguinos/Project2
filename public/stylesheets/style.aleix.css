@@ -147,10 +147,11 @@
 
 #img-container>.meetingIcon>p  {
     font-size: 3rem;
+    color: 037171;
 }
   
 #meetingCreateSection{
-    background-color:  #ffcb47;
+    background-color:  white;
     padding: 30px;
 }
 
@@ -159,7 +160,7 @@
     font-size: 1.5em;
     font-weight: bolder;
     padding: 10px 25px 10px 25px;
-    border:1px solid black;
+    background-color: #ffcb47;
 }
 
 #meetingCreateSection > h3 {
@@ -172,6 +173,7 @@
 #searchEvent-button > button{
     font-size: 1.2em;
     padding: 10px 25px 10px 25px;
+    font-weight: 600;
 }
 
 #filterEvent-form{
@@ -204,8 +206,9 @@
 #meetingSearchSection{
     display: flex;
     flex-direction: column;
-    background-color: #ffcb47;
-    padding: 30px;
+    background-color: #037171;
+    background-image: url('/images/parlem7.png');
+    padding-top: 60px;
 }
 
 #meetingSearchSection form{
@@ -213,22 +216,34 @@
     padding: 20px;
 }
 
+#meetingSearchSection h3, #meetingSearchSection label {
+    color: white;
+}
+
 #meetingListSection {
     padding: 10px;
     background-color: #6ccff6;
 }
 
+#meetingListSection h1 {
+    margin: 30px;
+    color: white;
+}
+
 #resultsSearchSection {
     background-color: #ffcb47;
+    background-image: url('/images/parlem6.png');
     height: 300px;
 }
 
 #resultsListSection {
-    background-color: #ffe2fe;
+    background-color: #037171;
+    padding-bottom: 60px;
 }
 
 #resultsListSection>h1{
     margin: 30px;
+    color: white;
 }
 
 /* Event details */
@@ -328,12 +343,13 @@
 }
 
 #profileEvents>h1{
-    padding-top: 40px;
+    padding-top: 60px;
+    color: white;
 }
 
 .meetingDetails {
     padding: 10px;
-    background-color: #6ccff6;
+    background-color: #037171;
     border: 0px;
     border-radius: 10px;
     text-decoration: none;
@@ -342,6 +358,7 @@
 .meetingDetails a {
     color: white;
     text-decoration: none;
+    font-weight: 600;
 }
 
 .flexMeeting>div>p {

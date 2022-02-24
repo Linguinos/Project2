@@ -1,7 +1,7 @@
 /*---INDEX VIEW---------------------------------*/
 
 #forFotter{
-    height: 100%;
+    height: 100vh;
 }
 
 .index-container {
@@ -9,7 +9,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center; 
-    width: 100%;     
+    width: 100%;
+    height: 100%;     
 }
 
 #block1 {
@@ -74,6 +75,7 @@
     background-position: center;
     background-size:cover;
     width: 100%;
+    height: 100%;
 }
 
 #index-signUpButton {
@@ -112,14 +114,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
+    background-color: #6ccff6;  
+    background-image: url('/images/parlem5.png');  
 }
 
 .accessProfile-block {
-    background-color: white;
-    width: 100%;
+    background-color: rgba(255,255,255,0.3);
+    width: 80%;
+    border-radius: 20px;
     height: 50%;
-    padding-bottom: 5%;
+    padding: 5% 0%;
+    margin: 20px;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -129,6 +136,11 @@
 .accessProfile-block p {
     padding-bottom: 20px;
     font-size: 3.6em;
+    font-weight: 600;
+}
+
+.accessProfile-block h2 {
+    font-size: 4em;
 }
 
 .accessProfile-block a {
@@ -177,8 +189,14 @@
     font-size: 1.7em;
 }
 
+#see-profiles a button {
+    background-color: #037171;
+    font-weight: 600;
+}
+
 #see-events a button {
-    background-color: #d3c1d2;
+    background-color: #6ccff6;
+    font-weight: 600;
 }
 
 #see-events{
