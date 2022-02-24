@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-@media(max-width: 812px){
+@media(max-width: 900px){
 body {
   font-size: 10px;
   padding: 0px;
@@ -122,7 +122,7 @@ footer p {
 }
 
 
-@media(min-width: 813px){
+@media(min-width: 901px){
   body {
     font-size: 7px;
     padding: 0px;
