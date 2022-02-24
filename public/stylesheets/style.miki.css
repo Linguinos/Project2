@@ -15,7 +15,7 @@
 
 #block1 {
     padding: 100px; 
-    height: 65%;   
+       
 }
 
 #block2 {
@@ -25,20 +25,24 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    backdrop-filter: blur(20px);
+    align-items: center;
+    /*backdrop-filter: blur(20px);*/
+    width: 80%;
 }
 
 #block2 p {
     height: 200px;
     font-size: 2em;
-    padding-bottom: 50px;
+    padding-bottom: 10%;
     text-align: center;
+    color: white;
 }
 
 #block2 > h1 {
     padding:20px 0 20px 0;
     text-align: center;
     height: 100px;
+    color: #ffcb47;
 }
 
 #index-login {
@@ -71,16 +75,19 @@
 
 #background-img {
     background-image:
-        linear-gradient(rgba(202, 197, 183, 0.4), rgba(38, 9, 172, 0.6)), 
+        linear-gradient(rgba(202, 197, 183, 0.4), rgba(24, 127, 224, 0.973)), 
         url('/images/people-2.jpg');
     background-position: center;
     background-size:cover;
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #index-signUpButton {
-    padding: 100px;
+    padding: 40px;
 }
 
 #index-signUpButton button {
@@ -89,10 +96,11 @@
     padding-left: 50px;
     padding-right: 50px;
     font-size: 5em;
+    font-weight: 600;
 }
 
 #index-logInButton {
-   padding-top: 100px;
+   padding-top: 40px;
 }
 
 #index-logInButton button {
@@ -103,6 +111,7 @@
     padding-left: 50px;
     padding-right: 50px;
     font-size: 5em;
+    font-weight: 600;
 }
 
 
@@ -116,8 +125,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.feed-containerContainer {
     background-color: #6ccff6;  
-    background-image: url('/images/parlem5.png');  
+    background-image: url('/images/parlem5.png');
+    height: 100vh; 
 }
 
 .accessProfile-block {

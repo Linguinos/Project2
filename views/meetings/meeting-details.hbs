@@ -6,7 +6,11 @@
             <h2>{{meeting.city}}</h2>
         </div>
     {{/if}}
-    <h2>{{meeting.time}}  |  {{meeting.schedule}}</h2>
+    {{#if meeting.time}}
+        {{#if meeting.schedule}}
+            <h2>{{meeting.time}}  |  {{meeting.schedule}}</h2>
+        {{/if}}
+    {{/if}}
 </section>
 
 
@@ -24,12 +28,12 @@
     </div>
 
     <div class="attendees">
-        <h1>Attendees: </h1>
         <div class="host">
             <p>Hosted by:</p>
             <h3>{{meeting.host.username}}</h3>
             <p>Contact: {{meeting.host.email}}</p>
         </div>
+        <h1>Attendees: </h1>
         <div class="attendeesNames">
             {{#each meeting.attendees}}
                 <a href="/user/{{_id}}"><p>{{username}}</p></a>
