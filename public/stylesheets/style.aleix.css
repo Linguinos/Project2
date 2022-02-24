@@ -151,7 +151,7 @@
 }
   
 #meetingCreateSection{
-    background-color:  white;
+    background-color:  #ffcb47;
     padding: 30px;
 }
 
@@ -160,7 +160,7 @@
     font-size: 1.5em;
     font-weight: bolder;
     padding: 10px 25px 10px 25px;
-    background-color: #ffcb47;
+    border:1px solid black;
 }
 
 #meetingCreateSection > h3 {
@@ -173,7 +173,6 @@
 #searchEvent-button > button{
     font-size: 1.2em;
     padding: 10px 25px 10px 25px;
-    font-weight: 600;
 }
 
 #filterEvent-form{
@@ -206,9 +205,8 @@
 #meetingSearchSection{
     display: flex;
     flex-direction: column;
-    background-color: #037171;
-    background-image: url('/images/parlem7.png');
-    padding-top: 60px;
+    background-color: #ffcb47;
+    padding: 30px;
 }
 
 #meetingSearchSection form{
@@ -216,18 +214,9 @@
     padding: 20px;
 }
 
-#meetingSearchSection h3, label {
-    color: white;
-}
-
 #meetingListSection {
     padding: 10px;
     background-color: #6ccff6;
-}
-
-#meetingListSection h1 {
-    margin: 30px;
-    color: white;
 }
 
 #resultsSearchSection {
@@ -237,7 +226,7 @@
 }
 
 #resultsListSection {
-    background-color: #037171;
+    background-color: #D9BBF9;
     padding-bottom: 60px;
 }
 
