@@ -159,8 +159,9 @@ Meeting model:
 ## Git
 The url to the repository and to the deployed project:
 
+Repository
 
-
+[Heroku deployment](https://language-exchanger.herokuapp.com/)
 
 
 
